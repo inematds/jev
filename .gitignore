@@ -1,0 +1,12 @@
+# Segredos e dados operacionais
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+data/private/
+*.log
+
+# Materiais recebidos: somente locais, nunca versionar
+fontes/originais/
+fontes/manifest.json
