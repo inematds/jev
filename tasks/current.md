@@ -1,19 +1,19 @@
 # Trabalho atual
 
-## Entregue nesta etapa
+## Implementado
 
-- [x] Análise dos quatro materiais com fontes oficiais e limites de evidência.
-- [x] Dez aplicações priorizadas.
-- [x] Plano técnico, protocolo de avaliação, custos e contrato ilustrativo.
-- [x] Planejamento do curso em repositório separado.
+- [x] Análise, prioridades, protocolo e orçamento.
+- [x] Laboratório com dez casos, editor, JSON e custo.
+- [x] Cliente TypeSafe, validação e tratamento de falhas.
+- [x] CLI e baseline de regras, 24 tickets fictícios.
+- [x] Guia, capas e build público com lista explícita de arquivos.
+- [x] 14 testes do núcleo e testes desktop/mobile.
 
-## Próxima execução — ainda não iniciada
+## Próximos experimentos operacionais
 
-- [ ] Definir responsável do atendimento e política de rotulagem (etapa 0).
-- [ ] Montar dataset anonimizado e partições sem vazamento (etapa 1).
-- [ ] Verificar acesso ao Jev e escolher baseline LLM.
-- [ ] Implementar laboratório offline e adaptador real (etapa 2).
-- [ ] Executar avaliação e preencher relatório com evidência (etapa 3).
-- [ ] Observar tráfego e decidir expansão (etapas 4–5).
+- [ ] Configurar acesso à TypeSafe e executar smoke real.
+- [ ] Obter referência humana com dados autorizados representativos.
+- [ ] Comparar Jev, regras e LLM; calibrar e avaliar em partições separadas.
+- [ ] Observar tráfego real antes de conectar ações externas.
 
-Prioridade imediata: taxonomia e exemplos revisados; depois código. Não substituir este backlog por uma promessa de ganho de benchmark.
+Esses experimentos não foram substituídos pelos exemplos fictícios.

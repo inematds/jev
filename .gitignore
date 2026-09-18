@@ -10,3 +10,6 @@ data/private/
 # Materiais recebidos: somente locais, nunca versionar
 fontes/originais/
 fontes/manifest.json
+
+_site/
+node_modules/

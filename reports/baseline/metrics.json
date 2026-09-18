@@ -1,0 +1,171 @@
+{
+  "provider": "regras-lexicais",
+  "dataset": "data/tickets-sinteticos.jsonl",
+  "count": 24,
+  "accuracy": 0.8333333333333334,
+  "macro_f1": 0.8423520923520923,
+  "confusion": {
+    "cobranca": {
+      "cobranca": 4,
+      "insuficiente": 1
+    },
+    "suporte": {
+      "suporte": 6,
+      "insuficiente": 2
+    },
+    "vendas": {
+      "vendas": 5,
+      "insuficiente": 1
+    },
+    "insuficiente": {
+      "insuficiente": 5
+    }
+  },
+  "rows": [
+    {
+      "id": "t01",
+      "expected": "cobranca",
+      "predicted": "cobranca",
+      "correct": true
+    },
+    {
+      "id": "t02",
+      "expected": "cobranca",
+      "predicted": "cobranca",
+      "correct": true
+    },
+    {
+      "id": "t03",
+      "expected": "cobranca",
+      "predicted": "cobranca",
+      "correct": true
+    },
+    {
+      "id": "t04",
+      "expected": "cobranca",
+      "predicted": "cobranca",
+      "correct": true
+    },
+    {
+      "id": "t05",
+      "expected": "suporte",
+      "predicted": "suporte",
+      "correct": true
+    },
+    {
+      "id": "t06",
+      "expected": "suporte",
+      "predicted": "suporte",
+      "correct": true
+    },
+    {
+      "id": "t07",
+      "expected": "suporte",
+      "predicted": "suporte",
+      "correct": true
+    },
+    {
+      "id": "t08",
+      "expected": "suporte",
+      "predicted": "suporte",
+      "correct": true
+    },
+    {
+      "id": "t09",
+      "expected": "vendas",
+      "predicted": "vendas",
+      "correct": true
+    },
+    {
+      "id": "t10",
+      "expected": "vendas",
+      "predicted": "vendas",
+      "correct": true
+    },
+    {
+      "id": "t11",
+      "expected": "vendas",
+      "predicted": "vendas",
+      "correct": true
+    },
+    {
+      "id": "t12",
+      "expected": "vendas",
+      "predicted": "vendas",
+      "correct": true
+    },
+    {
+      "id": "t13",
+      "expected": "insuficiente",
+      "predicted": "insuficiente",
+      "correct": true
+    },
+    {
+      "id": "t14",
+      "expected": "insuficiente",
+      "predicted": "insuficiente",
+      "correct": true
+    },
+    {
+      "id": "t15",
+      "expected": "insuficiente",
+      "predicted": "insuficiente",
+      "correct": true
+    },
+    {
+      "id": "t16",
+      "expected": "insuficiente",
+      "predicted": "insuficiente",
+      "correct": true
+    },
+    {
+      "id": "t17",
+      "expected": "suporte",
+      "predicted": "insuficiente",
+      "correct": false
+    },
+    {
+      "id": "t18",
+      "expected": "cobranca",
+      "predicted": "insuficiente",
+      "correct": false
+    },
+    {
+      "id": "t19",
+      "expected": "vendas",
+      "predicted": "insuficiente",
+      "correct": false
+    },
+    {
+      "id": "t20",
+      "expected": "insuficiente",
+      "predicted": "insuficiente",
+      "correct": true
+    },
+    {
+      "id": "t21",
+      "expected": "suporte",
+      "predicted": "suporte",
+      "correct": true
+    },
+    {
+      "id": "t22",
+      "expected": "vendas",
+      "predicted": "vendas",
+      "correct": true
+    },
+    {
+      "id": "t23",
+      "expected": "suporte",
+      "predicted": "suporte",
+      "correct": true
+    },
+    {
+      "id": "t24",
+      "expected": "suporte",
+      "predicted": "insuficiente",
+      "correct": false
+    }
+  ],
+  "note": "Resultado da baseline local; não é benchmark Jev."
+}

@@ -1,0 +1,85 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jev Decision Lab — guia de uso</title><meta name="description" content="Dez casos de decisões estruturadas, laboratório didático, cliente Python e avaliação de regras. Aprenda a preparar sua integração Jev."><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"><style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut)} nav .links a.sec:hover{color:var(--txt)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:760px){nav .links a.sec{display:none}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:34ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;display:block}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:8px;background:rgba(226,162,59,.14);color:var(--amb);font-family:Sora;font-weight:800;font-size:.9rem;margin-bottom:.7em}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px 1fr;gap:16px;margin-bottom:26px}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.ex{grid-template-columns:1fr}}
+  .ex figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ex figure img{width:100%;display:block}
+  .ex figcaption{padding:12px 14px;font-size:.88rem;color:var(--mut);background:var(--card)}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+nav .wrap{height:auto;min-height:60px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}a:focus-visible,button:focus-visible{outline:3px solid var(--amb);outline-offset:4px}body.light nav{background:var(--bg)}@media(max-width:540px){nav .wrap{gap:10px}nav .links{gap:10px}.hero .lead{max-width:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}.step{grid-template-columns:46px minmax(0,1fr)}.step>div,.card{min-width:0}:root{--amb-fill:#E2A23B}body.light{--amb:#875500}.btn,.step .b{background:var(--amb-fill)}</style></head><body><nav><div class="wrap"><a class="brand" href="#top">Jev Lab</a><span class="sep">|</span><span class="clubpro"><a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a><span class="sep">-</span><a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a></span><div class="links"><a class="sec" href="#guia">Começar</a><a class="sec" href="#exemplos">Dez casos</a><button class="tgl" id="themeToggle" aria-label="Alternar tema">☀</button><a class="btn" href="https://github.com/inematds/jev">GitHub</a></div></div></nav><header class="hero" id="top"><div class="wrap"><div><h1>Antes de automatizar, <span class="amb">entenda a decisão.</span></h1><p class="lead">Dez casos práticos para formular perguntas, explorar alternativas e preparar sua integração com Jev.</p><div class="cta"><a class="btn" href="../app/">Abrir laboratório</a><a class="btn ghost" href="https://github.com/inematds/jev-curso">Estudar o conteúdo do curso</a></div><p class="mut">Exemplos públicos didáticos. Inferência real disponível pelo cliente local com credencial TypeSafe.</p></div><figure><img src="assets/hero.png" width="1024" height="768" alt="Organização de documentos em diferentes bandejas numa mesa de trabalho"></figure></div></header><section id="oque"><div class="wrap"><h2>Um laboratório de decisões estruturadas</h2><p class="sub">Jev avalia um contexto a partir de perguntas e opções. Este projeto ajuda você a desenhar o fluxo ao redor dessa resposta.</p><div class="grid g3"><div class="card"><h3>Explore dez situações</h3><p>Atendimento, documentos, agentes e mais. Cada exemplo traz alternativas, resposta simulada e próximo passo.</p></div><div class="card"><h3>Prepare a integração</h3><p>Edite o contexto, baixe o JSON e use a CLI ou o servidor local. A chave permanece no ambiente do servidor.</p></div><div class="card"><h3>Compare antes de adotar</h3><p>Execute regras locais em um dataset fictício e leia acertos, erros e matriz de confusão.</p></div></div></div></section><section id="fluxo"><div class="wrap"><h2>O modelo sugere. O fluxo mantém o controle.</h2><p class="sub">Saída válida não garante interpretação correta. Revisão, limites e permissões pertencem ao software.</p><div class="flow"><span>Contexto</span><span class="arr">→</span><span>Pergunta e opções</span><span class="arr">→</span><span>Validação</span><span class="arr">→</span><span>Sugestão ou revisão</span></div><p>O laboratório não envia mensagens, não faz pagamentos e não controla agentes externos. Casos clínicos, contratuais e financeiros são exercícios fictícios supervisionados.</p></div></section><section id="pre"><div class="wrap"><h2>O que você precisa</h2><div class="grid g2"><div class="card"><h3>Para explorar agora</h3><p>Um navegador moderno. A versão pública funciona sem cadastro, chave ou pagamento.</p></div><div class="card"><h3>Para rodar localmente</h3><p>Python 3.10 ou posterior e Git. O núcleo usa somente a biblioteca padrão. Consultas reais exigem acesso à TypeSafe.</p><pre>python3 --version
+git --version</pre></div></div></div></section><section id="guia"><div class="wrap"><h2>Do primeiro exemplo ao teste local</h2><div class="step"><div class="b">1</div><div><h3>Explore no navegador</h3><p>Escolha um dos dez casos. A resposta é autoral e simulada; alterar o texto exige uma consulta real para obter uma nova decisão.</p><pre>https://inematds.github.io/jev/app/</pre></div></div><div class="step"><div class="b">2</div><div><h3>Instale e abra localmente</h3><p>O servidor fica restrito ao seu computador. Abra o endereço mostrado no terminal.</p><pre>git clone https://github.com/inematds/jev.git
+cd jev
+python3 -m jev_lab serve</pre></div></div><div class="step"><div class="b">3</div><div><h3>Valide antes de enviar</h3><p>A validação do contrato não consome API. Substitua o caminho pelo JSON que você exportou.</p><pre>python3 -m jev_lab validate exemplos/triagem-request.json</pre></div></div><div class="step"><div class="b">4</div><div><h3>Consulte o provedor quando tiver acesso</h3><p>Configure TYPESAFE_API_KEY no ambiente do processo ou nos arquivos autorizados openpcbotv2/.env ou wifi/.env. O cliente lê em runtime, sem copiar a chave. Nenhuma inferência real foi medida nesta entrega.</p><pre>python3 -m jev_lab ask exemplos/triagem-request.json</pre></div></div><div class="step"><div class="b">5</div><div><h3>Execute a referência por regras</h3><p>Gera JSON de métricas e CSV de predições. Os dados são fictícios e os resultados medem regras lexicais, não Jev.</p><pre>python3 -m jev_lab batch data/tickets-sinteticos.jsonl --out reports/baseline</pre></div></div><div class="step"><div class="b">6</div><div><h3>Verifique a instalação</h3><p>Os testes cobrem contratos, políticas, erros do provedor e duplicatas em lote. Não precisam de chave.</p><pre>python3 -m unittest discover -s tests -v</pre></div></div></div></section><section id="exemplos"><div class="wrap"><h2>Os dez casos, com seus limites</h2><div class="grid g2"><article class="card"><h3><a href="../app/#afirmacoes">1. Checagem de afirmações</a></h3><p>Confronte uma afirmação com a evidência disponível.</p><p>Revisar a redação; manter o link da evidência. Não declarar verdade universal.</p></article><article class="card"><h3><a href="../app/#atendimento">2. Triagem de atendimento</a></h3><p>Sugira a equipe responsável por uma solicitação.</p><p>Sugerir uma fila reversível e registrar correção humana.</p></article><article class="card"><h3><a href="../app/#contratos">3. Checklist de contratos</a></h3><p>Localize pontos que pedem revisão especializada.</p><p>Encaminhar a profissional; nenhuma aprovação jurídica automática.</p></article><article class="card"><h3><a href="../app/#emails">4. Mudanças em e-mails</a></h3><p>Distingua proposta de mudança e confirmação.</p><p>Destacar a mensagem. Calendário e fusos devem ser resolvidos em código.</p></article><article class="card"><h3><a href="../app/#modelos">5. Roteamento de modelos</a></h3><p>Escolha a capacidade necessária antes de gerar.</p><p>A política resolve o nome concreto do modelo e mede a qualidade final.</p></article><article class="card"><h3><a href="../app/#verificacao">6. Verificação de etapas</a></h3><p>Avalie um critério explícito do resultado de um agente.</p><p>Corrigir uma vez ou escalar. Não substituir execução de testes por julgamento.</p></article><article class="card"><h3><a href="../app/#agentes">7. Roteamento de agentes</a></h3><p>Despache para uma especialidade sem ampliar permissões.</p><p>Encaminhar ao catálogo; permissões continuam determinadas pelo sistema.</p></article><article class="card"><h3><a href="../app/#navegador">8. Elementos no navegador</a></h3><p>Selecione um candidato a partir do texto da página.</p><p>Validar o ID no DOM atual e a ação permitida antes do clique.</p></article><article class="card"><h3><a href="../app/#clinica">9. Fila de revisão clínica</a></h3><p>Estudo fictício de organização, sempre supervisionado.</p><p>Revisão humana obrigatória; não há diagnóstico ou conduta clínica.</p></article><article class="card"><h3><a href="../app/#alertas">10. Alertas financeiros</a></h3><p>Organize uma fila fictícia conforme política explícita.</p><p>Organização supervisionada; nenhuma ordem financeira é executada.</p></article></div></div></section><section id="custos"><div class="wrap"><h2>Preço por token não é custo do processo</h2><p>Na tarifa consultada de US$ 0,042 por milhão de tokens de entrada, 10.000 tokens custam US$ 0,00042. Dez mil chamadas iguais somam US$ 4,20. Acrescente modelo de fallback, revisão humana, infraestrutura e retrabalho.</p><p><a href="../app/#costTitle">Experimentar a calculadora</a> · <a href="https://docs.typesafe.ai/models">Conferir tarifa oficial</a></p></div></section><section id="roadmap"><div class="wrap"><h2>O que já funciona e o que depende de evidência</h2><div class="phase"><div class="tag">Disponível</div><div class="d"><strong>Laboratório educacional e cliente local</strong><span>Dez casos, editor, exportação JSON, calculadora, validação, adaptador HTTP e avaliação da baseline.</span></div></div><div class="phase"><div class="tag">A validar</div><div class="d"><strong>Inferência real e qualidade em português</strong><span>O adaptador foi testado com respostas controladas. Sem credencial disponível, não há benchmark próprio do Jev.</span></div></div><div class="phase"><div class="tag">Próximo</div><div class="d"><strong>Piloto com dados revisados</strong><span>Coletar referência humana, calibrar políticas e observar antes de conectar uma operação.</span></div></div></div></section><footer><div class="wrap"><span class="pill">Python</span><span class="pill">HTML + JavaScript</span><span class="pill">v1.1.0</span><p>Projeto educacional independente · <a href="https://github.com/inematds/jev">Código e documentação</a> · <a href="https://inema.club">INEMA.CLUB</a> · <a href="https://inema.pro">PRO</a></p></div></footer><script>const t=document.getElementById('themeToggle');try{document.body.classList.toggle('light',localStorage.getItem('jev-guide-theme')==='light')}catch{};t.onclick=()=>{document.body.classList.toggle('light');try{localStorage.setItem('jev-guide-theme',document.body.classList.contains('light')?'light':'dark')}catch{}};</script></body></html>

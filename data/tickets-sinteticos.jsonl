@@ -1,0 +1,24 @@
+{"id": "t01", "text": "Paguei duas vezes.", "label": "cobranca", "source": "ficticio-autoral"}
+{"id": "t02", "text": "Minha fatura veio errada.", "label": "cobranca", "source": "ficticio-autoral"}
+{"id": "t03", "text": "Quero solicitar estorno.", "label": "cobranca", "source": "ficticio-autoral"}
+{"id": "t04", "text": "A cobrança está duplicada.", "label": "cobranca", "source": "ficticio-autoral"}
+{"id": "t05", "text": "Não consigo recuperar a senha.", "label": "suporte", "source": "ficticio-autoral"}
+{"id": "t06", "text": "Meu login não funciona.", "label": "suporte", "source": "ficticio-autoral"}
+{"id": "t07", "text": "Recebo erro ao abrir a aula.", "label": "suporte", "source": "ficticio-autoral"}
+{"id": "t08", "text": "Preciso de acesso ao conteúdo.", "label": "suporte", "source": "ficticio-autoral"}
+{"id": "t09", "text": "Quero contratar o curso.", "label": "vendas", "source": "ficticio-autoral"}
+{"id": "t10", "text": "Qual o preço do curso?", "label": "vendas", "source": "ficticio-autoral"}
+{"id": "t11", "text": "Quero comprar uma assinatura.", "label": "vendas", "source": "ficticio-autoral"}
+{"id": "t12", "text": "Existe plano para equipes?", "label": "vendas", "source": "ficticio-autoral"}
+{"id": "t13", "text": "Olá, podem me ajudar?", "label": "insuficiente", "source": "ficticio-autoral"}
+{"id": "t14", "text": "Gostaria de saber mais.", "label": "insuficiente", "source": "ficticio-autoral"}
+{"id": "t15", "text": "Minha senha falhou e quero estorno.", "label": "insuficiente", "source": "ficticio-autoral"}
+{"id": "t16", "text": "Quero contratar, mas minha fatura duplicou.", "label": "insuficiente", "source": "ficticio-autoral"}
+{"id": "t17", "text": "Não consigo entrar na minha conta.", "label": "suporte", "source": "ficticio-autoral"}
+{"id": "t18", "text": "O dinheiro saiu duas vezes.", "label": "cobranca", "source": "ficticio-autoral"}
+{"id": "t19", "text": "Quanto custa participar?", "label": "vendas", "source": "ficticio-autoral"}
+{"id": "t20", "text": "Me explica isso.", "label": "insuficiente", "source": "ficticio-autoral"}
+{"id": "t21", "text": "Acesso bloqueado após pagamento.", "label": "suporte", "source": "ficticio-autoral"}
+{"id": "t22", "text": "Preço e condições de contratação.", "label": "vendas", "source": "ficticio-autoral"}
+{"id": "t23", "text": "Erro no login e na senha.", "label": "suporte", "source": "ficticio-autoral"}
+{"id": "t24", "text": "Não é cobrança; preciso trocar a senha.", "label": "suporte", "source": "ficticio-autoral"}
