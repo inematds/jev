@@ -5,3 +5,5 @@
 14 testes do núcleo e testes de navegador passaram. Baseline lexical acertou 20/24 tickets fictícios. Não houve inferência real Jev por ausência de credencial. Integrações operacionais e avaliação com tráfego real continuam futuras. Materiais recebidos permanecem fora do Git e do build público.
 
 Curso: conteúdo autoral no repositório irmão; escolha de formato visual ainda pendente no momento desta implementação.
+
+Aplicação publicada no Pages com HTTP 200 e cadastrada no portal/PRO. Curso também cadastrado, com destino Markdown. Evidências e commits em `docs/06-publicacao.md`.
