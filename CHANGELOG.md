@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.1 — 2026-09-18
+
+- Publica a capa também sob guia/capa para a URL resolvida pelo catálogo PRO.
+
 ## v1.1.0 — 2026-09-18
 
 - Laboratório de dez casos, editor e calculadora.

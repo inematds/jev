@@ -1,6 +1,6 @@
 # Jev Decision Lab
 
-**v1.1.0** · Laboratório educacional de decisões estruturadas.
+**v1.1.1** · Laboratório educacional de decisões estruturadas.
 
 [Guia de uso](https://inematds.github.io/jev/guia/) · [Abrir laboratório](https://inematds.github.io/jev/app/) · [Curso](https://github.com/inematds/jev-curso)
 

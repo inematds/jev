@@ -117,7 +117,7 @@ def evaluate(payload, *, key=None, timeout=5, opener=urlopen):
         remaining = deadline - time.monotonic()
         if remaining <= 0:
             raise LabError('Prazo de inferência excedido. Encaminhe para revisão.')
-        req = Request('https://api.typesafe.ai/v1/systemone', data=json.dumps(payload).encode(), headers={'Authorization': 'Bearer '+key, 'Content-Type': 'application/json', 'User-Agent': 'JevDecisionLab/1.1.0'}, method='POST')
+        req = Request('https://api.typesafe.ai/v1/systemone', data=json.dumps(payload).encode(), headers={'Authorization': 'Bearer '+key, 'Content-Type': 'application/json', 'User-Agent': 'JevDecisionLab/1.1.1'}, method='POST')
         try:
             with opener(req, timeout=remaining) as res:
                 raw = res.read(1_000_001)
