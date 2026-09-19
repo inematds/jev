@@ -1,0 +1,18 @@
+{
+  "id": "reunioes",
+  "title": "Qualidade de reuniões",
+  "objective": "Verificar decisão, próximo passo, responsável e prazo.",
+  "sensitive": false,
+  "expected": "encaminhamento_claro",
+  "expected_answers": {
+    "decisao": "encaminhamento_claro",
+    "tem_decisao": true,
+    "tem_proximo_passo": true,
+    "tem_responsavel": true,
+    "tem_prazo": true
+  },
+  "integration_point": "Depois da transcrição autorizada da reunião.",
+  "suggested_use": "Apontar lacunas para revisão. Não extrai automaticamente nomes ou datas; resolver calendário e confirmar tarefas em outra etapa.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "4d27653ed4d2dcef2b0a140cc68e32c10382f6da5aa04c467150aaa4adbdc5cc"
+}

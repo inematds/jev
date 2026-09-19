@@ -9,8 +9,8 @@ from pacotes.integracao import avaliar_area, carregar, demonstrar, listar
 
 
 class Packages(unittest.TestCase):
-    def test_ten_offline_packages_have_valid_results_without_network(self):
-        self.assertEqual(len(listar()), 10)
+    def test_all_offline_packages_have_valid_results_without_network(self):
+        self.assertEqual(len(listar()), 17)
         with patch('urllib.request.OpenerDirector.open', side_effect=AssertionError('network')):
             for area in listar():
                 with self.subTest(area=area):

@@ -1,0 +1,48 @@
+{
+  "model": "exemplo-didatico-nao-jev",
+  "answers": {
+    "decisao": {
+      "type": "choice",
+      "probabilities": {
+        "ajuda": 0.96,
+        "conteudo": 0.01,
+        "comercial": 0.01,
+        "feedback": 0.01,
+        "insuficiente": 0.01
+      },
+      "confidence": 0.93,
+      "choice": "ajuda"
+    },
+    "precisa_resposta": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "ideia_conteudo": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "intencao_compra": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "dificuldade": {
+      "type": "score",
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.96,
+        "2": 0.02
+      },
+      "confidence": 0.93,
+      "score": 1.0,
+      "legend": {
+        "0": "Dúvida clara com detalhes suficientes",
+        "1": "Faltam alguns detalhes técnicos",
+        "2": "Não é possível delimitar a dúvida"
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

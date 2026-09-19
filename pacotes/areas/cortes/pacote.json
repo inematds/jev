@@ -1,0 +1,18 @@
+{
+  "id": "cortes",
+  "title": "Seleção de cortes",
+  "objective": "Avaliar se a transcrição de um trecho sustenta um corte independente.",
+  "sensitive": false,
+  "expected": "candidato",
+  "expected_answers": {
+    "decisao": "candidato",
+    "ideia_completa": true,
+    "depende_contexto": false,
+    "frase_destacavel": true,
+    "clareza_textual": 2
+  },
+  "integration_point": "Depois de transcrever e segmentar no inemavox; envie texto e tempos, não o arquivo de vídeo.",
+  "suggested_use": "Sugerir candidatos para edição humana. Não mede retenção, qualidade visual ou áudio; não corta nem publica mídia.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "54ecaf93eed9694a6a20ef61564b73253b062da1efff2c05e43368a9ab97dfdc"
+}

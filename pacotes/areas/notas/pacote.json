@@ -1,0 +1,18 @@
+{
+  "id": "notas",
+  "title": "Organização de notas e áudios",
+  "objective": "Separar tarefas, ideias, diário e referências após transcrição.",
+  "sensitive": false,
+  "expected": "tarefa",
+  "expected_answers": {
+    "decisao": "tarefa",
+    "tem_tarefa": true,
+    "tem_ideia": true,
+    "prazo_mencionado": true,
+    "urgencia": 1
+  },
+  "integration_point": "Após uma nota textual ou uma transcrição no seu bot; conserve o original no sistema de origem.",
+  "suggested_use": "Sugerir organização e preservar múltiplas intenções. Extrair texto da tarefa, resolver datas relativas e gravar exigem etapas próprias.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "8773b639be11092ef7b0b154d4d872d49316bf1ebe3580b6a39c39d481fa67c1"
+}

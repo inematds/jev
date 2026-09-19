@@ -24,3 +24,7 @@ python3 -m jev_lab ask exemplos/skills-request.json
 Para comparar resultados com uma referência humana, siga [Experimentos](../../docs/08-experimentos.md). O avaliador em lote atual tem uma pergunta Choice como alvo; não calcula automaticamente a qualidade conjunta de todas as perguntas de um template composto.
 
 **Estado:** templates reutilizáveis, sem conectores prontos de CRM, help desk ou orquestradores. Cada template contém dados fictícios; os resultados reais dependem do provedor e da avaliação no domínio de destino.
+
+## Novas receitas com várias perguntas
+
+Caixa de entrada, comentários do YouTube, comunidades, reuniões, cortes por transcrição, notas e curadoria estão nos [17 pacotes](../areas/README.md). Há também [executor de lotes e avaliação por pergunta](../../docs/11-fluxos-praticos.md).

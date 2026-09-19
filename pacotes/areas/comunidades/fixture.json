@@ -1,0 +1,48 @@
+{
+  "model": "exemplo-didatico-nao-jev",
+  "answers": {
+    "decisao": {
+      "type": "choice",
+      "probabilities": {
+        "ajuda": 0.96,
+        "feedback": 0.01,
+        "depoimento": 0.01,
+        "discussao": 0.01,
+        "insuficiente": 0.01
+      },
+      "confidence": 0.93,
+      "choice": "ajuda"
+    },
+    "intervencao_equipe": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "insatisfacao_expressa": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "saida_explicita": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "clareza": {
+      "type": "score",
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.96,
+        "2": 0.02
+      },
+      "confidence": 0.93,
+      "score": 1.0,
+      "legend": {
+        "0": "Sem problema identificável",
+        "1": "Problema identificado sem detalhes suficientes",
+        "2": "Problema com detalhes reproduzíveis"
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

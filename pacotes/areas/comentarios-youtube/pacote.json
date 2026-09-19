@@ -1,0 +1,18 @@
+{
+  "id": "comentarios-youtube",
+  "title": "Comentários do YouTube",
+  "objective": "Priorizar dúvidas e sugestões de conteúdo.",
+  "sensitive": false,
+  "expected": "ajuda",
+  "expected_answers": {
+    "decisao": "ajuda",
+    "precisa_resposta": true,
+    "ideia_conteudo": true,
+    "intencao_compra": false,
+    "dificuldade": 1
+  },
+  "integration_point": "Após importar comentários pela integração autorizada da sua aplicação.",
+  "suggested_use": "Preparar uma fila de respostas e ideias; geração e publicação da resposta são etapas separadas.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "46175a6fdc4e1bd9d6e0e033f27d468ca91bc7e20757189cb83dce7b5d6e10e1"
+}

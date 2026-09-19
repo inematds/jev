@@ -10,9 +10,9 @@ from .integracao import avaliar_area, carregar, demonstrar, listar
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('area', nargs='?')
-    parser.add_argument('--list', action='store_true', help='Lista as dez áreas.')
+    parser.add_argument('--list', action='store_true', help='Lista todas as áreas.')
     parser.add_argument('--provider', choices=['typesafe','openrouter'], help='Provedor da consulta real; também configurável por JEV_PROVIDER.')
-    parser.add_argument('--live', action='store_true', help='Consulta real; envia contexto à TypeSafe e pode consumir créditos.')
+    parser.add_argument('--live', action='store_true', help='Consulta real; envia contexto ao provedor e pode consumir créditos.')
     parser.add_argument('--state-file', type=Path, help='Arquivo UTF-8 com o contexto completo.')
     parser.add_argument('--state-format', choices=['text','json'], default='text')
     args = parser.parse_args()

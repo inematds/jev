@@ -4,7 +4,7 @@
 
 ![Jev Decision Lab — more features, simple to use: 20 practical cases, experiments and comparisons](capa/novos-recursos-v1.2.1.png)
 
-**v1.5.1** · A lab for defining, testing and comparing AI decisions, with a simple interface and advanced features when you need them.
+**v1.6.1** · A lab for defining, testing and comparing AI decisions, with a simple interface and advanced features when you need them.
 
 [Open the lab](https://inematds.github.io/jev/app/) · [User guide](https://inematds.github.io/jev/guia/) · [Course in Portuguese](https://github.com/inematds/jev-curso)
 
@@ -16,7 +16,19 @@ This README is translated into English. The interface, linked project documentat
 
 ## Bring it into your project
 
-The **[pacotes/](pacotes/README.md)** directory contains **ten packages by activity**, a Python integration, the `jev-integrar` skill and usage recipes. Start offline with `python3 -m pacotes.executar atendimento`. For your backend, see [how to integrate Jev into your systems](pacotes/INTEGRACAO.md). Each package explains what already works and what still requires integration.
+The **[pacotes/](pacotes/README.md)** directory contains **17 packages by activity**, a Python integration, the `jev-integrar` skill and usage recipes. Start offline with `python3 -m pacotes.executar atendimento`. For your backend, see [how to integrate Jev into your systems](pacotes/INTEGRACAO.md). Each package explains what already works and what still requires integration.
+
+## New practical workflows
+
+There are now **17 reusable packages**: the original ten plus **inbox triage, YouTube comments, communities, meetings, transcript-based clip selection, notes and feed curation**. The new packages combine Choice, Noul and Score; their fixtures are fictional, with no real benchmark.
+
+```bash
+python3 -m pacotes.executar reunioes
+python3 -m pacotes.qualidade reunioes
+python3 -m pacotes.lote reunioes data/reunioes-eventos.jsonl
+```
+
+The first two commands demonstrate the example and its simulated metrics. The third previews a batch without API calls. With `--live`, the runner processes JSONL, supports up to four workers and resumes saved results. Per-question evaluation measures accuracy, Brier or Score error according to the type. **[Instructions, integration and limitations](docs/11-fluxos-praticos.md)**. There is no platform data collection or automatic action execution.
 
 ## Real Jev inference through OpenRouter
 
@@ -26,7 +38,7 @@ Support for **`~typesafe/jev-latest`**, confirmed through the Decisions API. Con
 python3 -m pacotes.executar atendimento --live --provider openrouter
 ```
 
-All ten packages were tested with real inference: ten successful responses and ten expected classifications on fictional examples. This is an integration test, not an independent benchmark. [Setup and code for your system](docs/10-openrouter.md) · [Measured report](reports/openrouter-smoke.json).
+The original ten packages were tested with real inference: ten successful responses and ten expected classifications on fictional examples. This is an integration test, not an independent benchmark. [Setup and code for your system](docs/10-openrouter.md) · [Measured report](reports/openrouter-smoke.json).
 
 ## Use it in Codex, Claude Code and openpcbotv3
 

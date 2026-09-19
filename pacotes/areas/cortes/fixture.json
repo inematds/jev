@@ -1,0 +1,47 @@
+{
+  "model": "exemplo-didatico-nao-jev",
+  "answers": {
+    "decisao": {
+      "type": "choice",
+      "probabilities": {
+        "candidato": 0.96,
+        "revisar": 0.013333333333333334,
+        "descartar": 0.013333333333333334,
+        "insuficiente": 0.013333333333333334
+      },
+      "confidence": 0.93,
+      "choice": "candidato"
+    },
+    "ideia_completa": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "depende_contexto": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "frase_destacavel": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "clareza_textual": {
+      "type": "score",
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.02,
+        "2": 0.96
+      },
+      "confidence": 0.93,
+      "score": 1.94,
+      "legend": {
+        "0": "Incompreensível sem contexto",
+        "1": "Parcialmente compreensível",
+        "2": "Compreensível com ideia completa"
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

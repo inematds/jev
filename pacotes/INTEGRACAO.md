@@ -15,7 +15,7 @@ flowchart LR
 
 Exemplo: um ticket acabou de chegar ao seu sistema. A decisão é a fila sugerida: suporte, cobrança, vendas ou informação insuficiente. O Jev não precisa substituir o help desk.
 
-Escolha um dos [dez pacotes](areas/README.md). Mantenha critérios explícitos e uma alternativa de insuficiência. Quando a entrada exigir briefing, rubrica ou catálogo, forneça esse contexto completo.
+Escolha um dos [17 pacotes](areas/README.md). Mantenha critérios explícitos e uma alternativa de insuficiência. Quando a entrada exigir briefing, rubrica ou catálogo, forneça esse contexto completo.
 
 ## 2. Disponibilize o código no backend
 

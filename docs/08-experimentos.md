@@ -1,6 +1,6 @@
 # Experimentos reproduzíveis
 
-O laboratório executa **regras**, **Jev direto**, **híbrido de regras + Jev** e **replay**. Nenhum modo executa a ação classificada. A avaliação usa uma pergunta `Choice` como alvo; a requisição pode conter perguntas auxiliares. Noul e Score estão disponíveis no editor e na consulta, mas não têm métrica de qualidade automática nesse avaliador.
+O laboratório executa **regras**, **Jev direto**, **híbrido de regras + Jev** e **replay**. Nenhum modo executa a ação classificada. A avaliação usa uma pergunta `Choice` como alvo; a requisição pode conter perguntas auxiliares. Noul e Score estão disponíveis no editor e na consulta, mas não têm métrica de qualidade automática nesse avaliador. Para avaliar todas as perguntas Choice/Noul/Score contra referências explícitas, use o avaliador complementar [pacotes.qualidade](11-fluxos-praticos.md).
 
 ## Um comando para começar
 

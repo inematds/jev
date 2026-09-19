@@ -1,0 +1,19 @@
+{
+  "id": "caixa-entrada",
+  "title": "Caixa de entrada",
+  "objective": "Separar mensagens e sinalizar o que precisa de revisão.",
+  "sensitive": false,
+  "expected": "financeiro",
+  "expected_answers": {
+    "decisao": "financeiro",
+    "documento_financeiro": true,
+    "patrocinio": false,
+    "sinal_phishing": false,
+    "urgencia": 0,
+    "aderencia_patrocinio": 0
+  },
+  "integration_point": "Após receber o e-mail no seu backend; envie apenas corpo e perfil necessários.",
+  "suggested_use": "Sugerir pasta e revisão; não mover, apagar, pagar ou abrir anexos automaticamente. Phishing exige controles próprios.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "8a985be9f623222a6f05868a6817837fa74a1461872d3030a5429e834f01541e"
+}

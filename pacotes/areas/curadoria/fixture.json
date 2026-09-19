@@ -1,0 +1,47 @@
+{
+  "model": "exemplo-didatico-nao-jev",
+  "answers": {
+    "decisao": {
+      "type": "choice",
+      "probabilities": {
+        "ler": 0.96,
+        "revisar": 0.013333333333333334,
+        "fora_escopo": 0.013333333333333334,
+        "insuficiente": 0.013333333333333334
+      },
+      "confidence": 0.93,
+      "choice": "ler"
+    },
+    "relacionado": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "exemplo_concreto": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "alega_novidade": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "utilidade_textual": {
+      "type": "score",
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.02,
+        "2": 0.96
+      },
+      "confidence": 0.93,
+      "score": 1.94,
+      "legend": {
+        "0": "Sem conteúdo aplicável",
+        "1": "Sugestão genérica",
+        "2": "Exemplo ou procedimento concreto"
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

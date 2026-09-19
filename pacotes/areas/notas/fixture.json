@@ -1,0 +1,48 @@
+{
+  "model": "exemplo-didatico-nao-jev",
+  "answers": {
+    "decisao": {
+      "type": "choice",
+      "probabilities": {
+        "tarefa": 0.96,
+        "ideia": 0.01,
+        "diario": 0.01,
+        "referencia": 0.01,
+        "insuficiente": 0.01
+      },
+      "confidence": 0.93,
+      "choice": "tarefa"
+    },
+    "tem_tarefa": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "tem_ideia": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "prazo_mencionado": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "urgencia": {
+      "type": "score",
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.96,
+        "2": 0.02
+      },
+      "confidence": 0.93,
+      "score": 1.0,
+      "legend": {
+        "0": "Sem urgência ou prazo",
+        "1": "Prazo mencionado sem emergência",
+        "2": "Urgência imediata explícita"
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

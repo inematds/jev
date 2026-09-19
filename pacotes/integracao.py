@@ -1,4 +1,4 @@
-"""Entrada reutilizável para os dez pacotes. Sem execução de ações externas."""
+"""Entrada reutilizável para os pacotes. Sem execução de ações externas."""
 import hashlib
 import json
 from pathlib import Path

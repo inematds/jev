@@ -19,3 +19,8 @@
 - [x] Integração compartilhada para backend Python e CLI para outros runtimes.
 
 - [x] Cliente OpenRouter Decisions e consultas reais aos dez pacotes.
+
+- [x] Sete pacotes adicionais: caixa de entrada, comentários do YouTube, comunidades, reuniões, cortes, notas e curadoria.
+- [x] Executor de lotes JSONL com prévia, limite, concorrência e retomada.
+- [x] Avaliação por pergunta Choice/Noul/Score, sem alegar calibração.
+- [ ] Conectores de eventos, extensão de navegador e integração de notas no bot.

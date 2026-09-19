@@ -13,7 +13,7 @@ Esta rota é a Decisions API, atualmente alpha. Não use `/chat/completions` par
 
 Referências oficiais: [API do modelo](https://openrouter.ai/~typesafe/jev-latest/api), [especificação OpenAPI](https://openrouter.ai/openapi.json), [Jev 1.13](https://openrouter.ai/typesafe/jev-1.13/).
 
-## Nos dez pacotes
+## Nos pacotes
 
 ```bash
 python3 -m pacotes.executar atendimento --live --provider openrouter
@@ -76,3 +76,5 @@ O cliente preserva `usage.cost` quando informado, sem deduzi-lo de texto gerado.
 Isso comprova que a integração funcionou para os exemplos. Não é amostra independente, teste de robustez, medição de calibração nem estimativa de qualidade em produção. Os exemplos e critérios já eram conhecidos, e a latência inclui a rede local.
 
 O catálogo genérico `/api/v1/models` não listou Jev na consulta desta sessão, apesar da página oficial e das chamadas à rota alpha funcionarem. A ausência naquela listagem não deve ser usada isoladamente como prova de indisponibilidade.
+
+Os sete pacotes adicionados na v1.6.1 usam o mesmo cliente, mas não fazem parte do relatório de dez consultas acima. Foram verificados com fixtures e testes controlados. [Novos fluxos](11-fluxos-praticos.md).

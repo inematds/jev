@@ -1,0 +1,36 @@
+{
+  "model": "exemplo-didatico-nao-jev",
+  "answers": {
+    "decisao": {
+      "type": "choice",
+      "probabilities": {
+        "encaminhamento_claro": 0.96,
+        "incompleto": 0.013333333333333334,
+        "sem_acao": 0.013333333333333334,
+        "insuficiente": 0.013333333333333334
+      },
+      "confidence": 0.93,
+      "choice": "encaminhamento_claro"
+    },
+    "tem_decisao": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "tem_proximo_passo": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "tem_responsavel": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "tem_prazo": {
+      "type": "noul",
+      "noul": 0.97
+    }
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

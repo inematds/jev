@@ -1,0 +1,63 @@
+{
+  "model": "exemplo-didatico-nao-jev",
+  "answers": {
+    "decisao": {
+      "type": "choice",
+      "probabilities": {
+        "financeiro": 0.96,
+        "newsletter": 0.01,
+        "proposta": 0.01,
+        "outro": 0.01,
+        "insuficiente": 0.01
+      },
+      "confidence": 0.93,
+      "choice": "financeiro"
+    },
+    "documento_financeiro": {
+      "type": "noul",
+      "noul": 0.97
+    },
+    "patrocinio": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "sinal_phishing": {
+      "type": "noul",
+      "noul": 0.03
+    },
+    "urgencia": {
+      "type": "score",
+      "probabilities": {
+        "0": 0.96,
+        "1": 0.02,
+        "2": 0.02
+      },
+      "confidence": 0.93,
+      "score": 0.06,
+      "legend": {
+        "0": "Sem ação solicitada",
+        "1": "Ação sem prazo imediato",
+        "2": "Prazo imediato explícito"
+      }
+    },
+    "aderencia_patrocinio": {
+      "type": "score",
+      "probabilities": {
+        "0": 0.96,
+        "1": 0.02,
+        "2": 0.02
+      },
+      "confidence": 0.93,
+      "score": 0.06,
+      "legend": {
+        "0": "Sem proposta ou incompatível",
+        "1": "Compatibilidade parcial",
+        "2": "Proposta explicitamente compatível"
+      }
+    }
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

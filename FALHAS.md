@@ -2,6 +2,7 @@
 
 | data | o que quebrou | menor correção | prompt \| infra |
 |---|---|---|---|
+| 2026-09-19 | leitura da análise assumiu exemplos/emails-request.json inexistente | consultar o caso emails em app/cases.json antes de resolver o caminho | prompt |
 | 2026-09-19 | pedido de tradução do README foi associado ao bot em vez do repo atual Jev | confirmar o escopo pelo diretório atual e aplicar a correção antes de editar | prompt |
 | 2026-09-19 | definição polyskill escrita com frontmatter de SKILL.md foi recusada | usar identity.description.full e declarar recursos conforme o template do CLI | prompt |
 | 2026-09-19 | validador aceitava Score acima do teto documentado e resposta sem legend | limitar a 2–10 níveis e exigir legenda correspondente, com testes negativos | infra |

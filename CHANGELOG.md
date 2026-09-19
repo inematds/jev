@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.6.1 — 2026-09-19
+
+- Adiciona sete pacotes de fluxos práticos, totalizando 17, com perguntas combinadas e fixtures identificadas.
+- Inclui executor JSONL com prévia, limites, concorrência de até quatro workers, lock e retomada por assinatura.
+- Adiciona avaliação offline por pergunta Choice/Noul/Score, com referência explícita e cobertura de falhas.
+- Atualiza os três READMEs e documenta limites de throughput, retenção, classificação de conteúdo e evidência.
+
 ## Documentação — 2026-09-19
 
 - Adiciona traduções completas do README em inglês e espanhol, com navegação entre os três idiomas. A versão da aplicação permanece v1.5.1.

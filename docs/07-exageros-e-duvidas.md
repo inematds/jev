@@ -45,7 +45,7 @@ A documentação reconhece dificuldades com números, datas, conteúdo adversari
 
 **O navegador foi realmente operado pelo modelo?** Sem o código e os registros da demo, não podemos separar seleção, cache, valores prontos, animação e execução. Navegação por DOM é uma arquitetura possível. Digitar valores existentes não exige geração de strings pelo Jev.
 
-**Qual rota de API está disponível?** O cliente deste projeto usa a API direta TypeSafe. Menções a outros gateways não garantem disponibilidade para nossa conta; cada rota exige contrato e preço próprios. Não configuramos adaptadores fictícios para provedores não verificados.
+**Qual rota de API está disponível?** O cliente deste projeto usa TypeSafe direta e OpenRouter Decisions, esta última confirmada em consultas reais. Outros gateways exigem verificação própria de contrato, disponibilidade e preço. Não configuramos adaptadores fictícios para provedores não verificados.
 
 **A própria documentação pode mudar?** Sim. A página de Score informa até 10 níveis, enquanto a referência HTTP resumida não explicita o máximo. O laboratório adota 2–10 descrições textuais e valida `legend`; é um subconjunto intencional do contrato. [Score](https://docs.typesafe.ai/primitives/score)
 
@@ -81,3 +81,16 @@ O modelo documentado é `jev-1.13.0`, textual, com orçamento total de 64k token
 ## Atualização: OpenRouter confirmado
 
 Em 19/09/2026, a rota alpha Decisions respondeu a consultas com `~typesafe/jev-latest`, incluindo os dez pacotes e as três primitivas. A ausência no catálogo genérico não significou indisponibilidade. Consulte [integração, fontes e evidência](10-openrouter.md). Os resultados dos exemplos não equivalem a benchmark independente ou calibração.
+
+## Novos fluxos: o que a demonstração não comprova
+
+- **Mil registros em poucos segundos:** requer conhecer tamanho das entradas, perguntas, concorrência, tentativas, limite da conta e tempo ponta a ponta. Comparar um concorrente sequencial com Jev paralelo mistura efeito do modelo e da implementação. Os fatores de ganho não são garantias locais.
+- **Contexto de 64k:** o limite total não elimina o limite adicional de 32k para estado mais a maior pergunta. Processar um corpus não significa colocar todos os documentos numa única chamada. [Modelos e limites](https://docs.typesafe.ai/models).
+- **Probabilidade de sim acima de 0,5:** é um corte possível, não uma política universal segura. Noul não devolve confidence separado. [Confidence](https://docs.typesafe.ai/confidence).
+- **Score de zero a dez:** onze níveis discretos excedem o máximo documentado de dez. Uma apresentação 0–10 pode ser uma transformação externa; não é o contrato literal do Score. [Score](https://docs.typesafe.ai/primitives/score).
+- **Retenção de cortes:** clareza textual e completude são critérios avaliáveis; prever audiência exige dados observados de retenção. Jev recebe texto, não analisa diretamente vídeo, áudio ou edição.
+- **Feed “gerado por IA” ou “notícia urgente”:** classificação textual não autentica autoria nem verifica fatos externos. O pacote de curadoria usa relevância e evidência explícita, sem alegar detectar IA.
+- **Risco de abandono:** insatisfação expressa é um sinal textual; previsão de churn exige referência e validação próprias. O pacote de comunidades distingue intenção explícita de sair de inferência sobre a pessoa.
+- **Trading rápido:** baixa latência e baixa tarifa não demonstram capacidade preditiva, lucro ou adequação operacional. Não incorporamos execução financeira.
+
+A v1.6.1 transforma as aplicações pertinentes em sete pacotes e adiciona lote e avaliação por pergunta. Fixtures dos novos pacotes não são benchmark. [Como executar e validar](11-fluxos-praticos.md).

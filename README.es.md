@@ -4,7 +4,7 @@
 
 ![Jev Decision Lab — más funciones, uso sencillo: 20 casos prácticos, experimentos y comparación](capa/novos-recursos-v1.2.1.png)
 
-**v1.5.1** · Un laboratorio para formular, probar y comparar decisiones de IA, con una interfaz sencilla y funciones avanzadas cuando las necesites.
+**v1.6.1** · Un laboratorio para formular, probar y comparar decisiones de IA, con una interfaz sencilla y funciones avanzadas cuando las necesites.
 
 [Abrir laboratorio](https://inematds.github.io/jev/app/) · [Guía de uso](https://inematds.github.io/jev/guia/) · [Curso en portugués](https://github.com/inematds/jev-curso)
 
@@ -16,7 +16,19 @@ Este README está traducido al español. La interfaz, la documentación enlazada
 
 ## Incorpóralo a tu proyecto
 
-La carpeta **[pacotes/](pacotes/README.md)** reúne **diez paquetes por área**, una integración Python, la skill `jev-integrar` y recetas de uso. Empieza sin conexión con `python3 -m pacotes.executar atendimento`. Para tu backend, consulta [cómo integrar Jev en tus sistemas](pacotes/INTEGRACAO.md). Cada paquete explica qué funciona y qué sigue dependiendo de una integración.
+La carpeta **[pacotes/](pacotes/README.md)** reúne **17 paquetes por área**, una integración Python, la skill `jev-integrar` y recetas de uso. Empieza sin conexión con `python3 -m pacotes.executar atendimento`. Para tu backend, consulta [cómo integrar Jev en tus sistemas](pacotes/INTEGRACAO.md). Cada paquete explica qué funciona y qué sigue dependiendo de una integración.
+
+## Nuevos flujos prácticos
+
+Ahora hay **17 paquetes reutilizables**: los diez originales más **bandeja de entrada, comentarios de YouTube, comunidades, reuniones, selección de clips por transcripción, notas y curación del feed**. Los nuevos paquetes combinan Choice, Noul y Score; sus fixtures son ficticias, sin benchmark real.
+
+```bash
+python3 -m pacotes.executar reunioes
+python3 -m pacotes.qualidade reunioes
+python3 -m pacotes.lote reunioes data/reunioes-eventos.jsonl
+```
+
+Los dos primeros comandos demuestran el ejemplo y sus métricas simuladas. El tercero muestra una vista previa sin API. Con `--live`, el ejecutor procesa JSONL, admite hasta cuatro workers y retoma resultados guardados. La evaluación por pregunta mide acierto, Brier o error de Score según el tipo. **[Instrucciones, integración y límites](docs/11-fluxos-praticos.md)**. No hay recopilación de datos de plataformas ni ejecución automática de acciones.
 
 ## Jev real mediante OpenRouter
 
@@ -26,7 +38,7 @@ Soporte para **`~typesafe/jev-latest`**, confirmado en la Decisions API. Configu
 python3 -m pacotes.executar atendimento --live --provider openrouter
 ```
 
-Los diez paquetes se probaron con inferencia real: diez respuestas sin fallos y diez clasificaciones esperadas en ejemplos ficticios. Es una prueba de integración, no un benchmark independiente. [Configuración y código para tu sistema](docs/10-openrouter.md) · [Informe medido](reports/openrouter-smoke.json).
+Los diez paquetes originales se probaron con inferencia real: diez respuestas sin fallos y diez clasificaciones esperadas en ejemplos ficticios. Es una prueba de integración, no un benchmark independiente. [Configuración y código para tu sistema](docs/10-openrouter.md) · [Informe medido](reports/openrouter-smoke.json).
 
 ## Uso en Codex, Claude Code y openpcbotv3
 
