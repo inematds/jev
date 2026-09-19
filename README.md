@@ -1,5 +1,7 @@
 # Jev Decision Lab
 
+**Idiomas:** [Português](README.md) · [English](README.en.md) · [Español](README.es.md)
+
 ![Jev Decision Lab — mais recursos, uso simples: 20 casos práticos, experimentos e comparação](capa/novos-recursos-v1.2.1.png)
 
 **v1.5.1** · Um laboratório para formular, testar e comparar decisões de IA, com uma interface simples e recursos avançados quando você precisar.

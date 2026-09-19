@@ -1,5 +1,9 @@
 # Changelog
 
+## Documentação — 2026-09-19
+
+- Adiciona traduções completas do README em inglês e espanhol, com navegação entre os três idiomas. A versão da aplicação permanece v1.5.1.
+
 ## v1.5.1 — 2026-09-19
 
 - Adiciona skill portátil jev-decidir com variantes Codex e Claude Code, script compartilhado e instalação local validada.
