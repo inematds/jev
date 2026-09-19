@@ -1,0 +1,60 @@
+{
+  "date": "2026-09-19T05:52:35.024346+00:00",
+  "note": "Teste dos scripts instalados em diretório independente. Mesmo exemplo fictício nas duas variantes. Não avalia seleção automática da skill pelo agente nem qualidade geral do modelo.",
+  "rows": [
+    {
+      "runtime_package": "codex",
+      "origin": "api",
+      "latency_ms": 668.52,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "fila": {
+            "type": "choice",
+            "choice": "cobranca",
+            "probabilities": {
+              "suporte": 0,
+              "insuficiente": 0.01,
+              "cobranca": 0.99
+            },
+            "confidence": 0.99
+          }
+        },
+        "usage": {
+          "input_tokens": 361,
+          "output_tokens": 46,
+          "cost": 1.5162e-05
+        },
+        "id": "gen-dec-1789797154-4lRzt16IKs3CqIzpF3KX",
+        "provider": "TypeSafe"
+      }
+    },
+    {
+      "runtime_package": "claude",
+      "origin": "api",
+      "latency_ms": 474.81,
+      "response": {
+        "model": "typesafe/jev-1.13-20260917",
+        "answers": {
+          "fila": {
+            "type": "choice",
+            "choice": "cobranca",
+            "probabilities": {
+              "insuficiente": 0.01,
+              "suporte": 0,
+              "cobranca": 0.99
+            },
+            "confidence": 0.99
+          }
+        },
+        "usage": {
+          "input_tokens": 361,
+          "output_tokens": 46,
+          "cost": 1.5162e-05
+        },
+        "id": "gen-dec-1789797154-fSnOxpIvkhKD7O5Uc4VE",
+        "provider": "TypeSafe"
+      }
+    }
+  ]
+}

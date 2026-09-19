@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.5.1 — 2026-09-19
+
+- Adiciona skill portátil jev-decidir com variantes Codex e Claude Code, script compartilhado e instalação local validada.
+- Documenta integração nativa no openpcbotv3 em observação, com gateway e orçamento do bot.
+- Registra consultas reais dos scripts instalados, sem alegar benchmark dos agentes.
+
 ## v1.4.1 — 2026-09-19
 
 - Integra OpenRouter Decisions API e alias ~typesafe/jev-latest com credencial própria.

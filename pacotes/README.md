@@ -5,6 +5,7 @@ Comece pelo seu objetivo. Esta pasta reúne os primeiros recursos de integraçã
 | Quero… | Pacote | Disponível agora |
 |---|---|---|
 | Usar decisões no meu código | [Python](python/README.md) | Função de integração e exemplo executável offline ou com API |
+| Consultar Jev dentro do meu agente | [Codex e Claude Code](skills/jev-decidir/README.md) | Skill jev-decidir instalada, variantes portáteis e script de consulta |
 | Pedir ao meu agente para integrar Jev | [Skill jev-integrar](skills/jev-integrar/SKILL.md) | Instruções copiáveis para o agente trabalhar no projeto de destino |
 | Começar por uma atividade | [Dez áreas](areas/README.md) | Dez pacotes executáveis com templates, fixture e instruções |
 | Integrar no meu backend | [Integração nos sistemas](INTEGRACAO.md) | Exemplo Python e contrato de subprocesso para outros sistemas |

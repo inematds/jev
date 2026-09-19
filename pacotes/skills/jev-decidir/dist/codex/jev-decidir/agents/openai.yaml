@@ -1,0 +1,3 @@
+interface:
+  short_description: Consultar Jev pelo OpenRouter para classificar informações
+  default_prompt: Use $jev-decidir to ...

@@ -1,6 +1,6 @@
 # Estado atual
 
-19/09/2026 · v1.4.1. Laboratório ampliado para 20 casos, Choice/Noul/Score, perguntas combinadas, estado JSON, importação/exportação, custo completo e leitura de relatórios. CLI experiment e compare: regras, Jev direto, híbrido e replay, com hashes, procedência, falhas e métricas.
+19/09/2026 · v1.5.1. Laboratório ampliado para 20 casos, Choice/Noul/Score, perguntas combinadas, estado JSON, importação/exportação, custo completo e leitura de relatórios. CLI experiment e compare: regras, Jev direto, híbrido e replay, com hashes, procedência, falhas e métricas.
 
 Score limitado a 2–10 níveis, legend validada. Baseline reexecutada: 20/24 fictícios; não há benchmark Jev real. Exemplos e replay são autorais simulados. Conteúdo recebido em doc/ e fontes/originais/ permanece local e excluído do build.
 
@@ -11,3 +11,5 @@ Pacotes iniciais em pacotes/: adaptador Python que usa o núcleo existente, skil
 Dez áreas em pacotes/areas, executor comum pacotes.executar, função avaliar_area e guia INTEGRACAO.md. Verificação: 34 testes Python, dez demonstrações offline e validação estrutural da skill. Não há pacote PyPI, conectores comerciais ou benchmark de inferência real.
 
 OpenRouter disponível com --provider openrouter ou JEV_PROVIDER=openrouter; modelo ~typesafe/jev-latest. Dez consultas reais passaram sem falha, além da consulta combinada Choice/Noul/Score. Report: reports/openrouter-smoke.json. Isso não é benchmark independente. Testes automatizados controlados: 41.
+
+Skill jev-decidir gerada via polyskill e instalada em ~/.agents/skills e ~/.claude/skills. Scripts das duas variantes consultaram Jev real com exemplo fictício. openpcbotv3 recebeu integração nativa em observação no gateway; serviço 3.3.4 ativo, observação habilitada no chat principal, sem controle de ações pelo Jev.

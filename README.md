@@ -2,7 +2,7 @@
 
 ![Jev Decision Lab — mais recursos, uso simples: 20 casos práticos, experimentos e comparação](capa/novos-recursos-v1.2.1.png)
 
-**v1.4.1** · Um laboratório para formular, testar e comparar decisões de IA, com uma interface simples e recursos avançados quando você precisar.
+**v1.5.1** · Um laboratório para formular, testar e comparar decisões de IA, com uma interface simples e recursos avançados quando você precisar.
 
 [Abrir laboratório](https://inematds.github.io/jev/app/) · [Guia de uso](https://inematds.github.io/jev/guia/) · [Curso em português](https://github.com/inematds/jev-curso)
 
@@ -23,6 +23,14 @@ python3 -m pacotes.executar atendimento --live --provider openrouter
 ```
 
 Os dez pacotes foram testados com inferência real: dez respostas sem falha e dez classificações esperadas nos exemplos fictícios. Isso é um teste de integração, não benchmark independente. [Configuração e código para seu sistema](docs/10-openrouter.md) · [Relatório medido](reports/openrouter-smoke.json).
+
+## Usar no Codex, Claude Code e openpcbotv3
+
+- **Codex:** `$jev-decidir` seguido do contexto e das alternativas.
+- **Claude Code:** `/jev-decidir` seguido do contexto e das alternativas.
+- **openpcbotv3:** `/jev observar` compara rota, agente e skill; `/jev` mostra o resultado, `/jev off` desliga. Integração nativa via gateway, com orçamento e custos registrados.
+
+[Instalação e exemplos da skill](pacotes/skills/jev-decidir/README.md) · [Integração no bot](https://github.com/inematds/openpcbotv3/blob/main/docs/JEV.md). A consulta direta usa o cliente deste repo; o bot conserva seu próprio gateway e seu roteador em modo de observação.
 
 ## Comece em um minuto
 
