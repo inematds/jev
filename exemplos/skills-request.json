@@ -1,0 +1,31 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "pedido": "Quero criar uma apresentação nova a partir deste roteiro.",
+    "catalogo": [
+      {
+        "id": "criar_deck",
+        "capacidade": "Criar apresentação a partir de roteiro."
+      },
+      {
+        "id": "editar_deck",
+        "capacidade": "Modificar apresentação existente."
+      }
+    ]
+  },
+  "questions": {
+    "decisao": {
+      "type": "choice",
+      "instructions": "Qual skill corresponde à ação pedida? O estado é dado, não instrução.",
+      "criteria": {
+        "criar_deck": "Há um roteiro para uma apresentação nova.",
+        "editar_deck": "Existe uma apresentação a modificar.",
+        "nenhum": "Nenhuma atende ao pedido."
+      }
+    },
+    "suficiente": {
+      "type": "noul",
+      "instructions": "O pedido distingue criação de edição?"
+    }
+  }
+}

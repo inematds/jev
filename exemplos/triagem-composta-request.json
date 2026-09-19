@@ -1,0 +1,36 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "mensagem": "Paguei duas vezes. Preciso resolver hoje antes de renovar. Quero o estorno da duplicata.",
+    "canal": "suporte"
+  },
+  "questions": {
+    "decisao": {
+      "type": "choice",
+      "instructions": "Qual fila corresponde ao pedido principal?",
+      "criteria": {
+        "suporte": "Acesso ou problema técnico.",
+        "cobranca": "Pagamentos e estornos.",
+        "vendas": "Nova contratação.",
+        "insuficiente": "Não dá para identificar."
+      }
+    },
+    "estorno": {
+      "type": "noul",
+      "instructions": "Há pedido explícito de estorno?"
+    },
+    "suficiente": {
+      "type": "noul",
+      "instructions": "Há informação para sugerir a fila, sem executar estorno?"
+    },
+    "prioridade": {
+      "type": "score",
+      "instructions": "Qual a urgência expressa?",
+      "criteria": [
+        "Sem prazo",
+        "Prazo informado sem bloqueio",
+        "Prazo imediato com bloqueio declarado"
+      ]
+    }
+  }
+}

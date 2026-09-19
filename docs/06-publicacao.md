@@ -18,3 +18,9 @@ Publicação dos catálogos foi isolada em `/tmp/jev-publicacao/{portal,inemabus
 ATENÇÃO: no inemabuscas, o remote `origin` aponta para outro projeto (INEMAPRO). O destino correto é o remote `inemabuscas`, upstream `inemabuscas/main`. Não usar origin nesse repo.
 
 Ao escolher a versão visual do curso: ler a skill correspondente, gerar HTML a partir de `conteudo/curso.json`, verificar aprendizagem/navegação e publicar Pages. Atualizar a URL do card e migrar enrichment de `curso:inematds-jev-curso` para o ID derivado da nova URL, preservando relacionados.
+
+## Verificação da atualização v1.2.1 — 19/09/2026
+
+Vinte casos validados; 27 testes Python passaram. Teste de navegador passou para os 20 casos, perguntas combinadas, importação/exportação, relatórios, temas, custos e layouts desktop/mobile sem overflow ou erros JavaScript. Build mantém somente app, guia, capa e entrada. Banner dos recursos adicionado ao README. Curso v1.2.0 validado: 12 módulos, 36 aulas e 12 laboratórios; casos sincronizados com o app.
+
+Mantida a identidade visual existente; o detector de estilo apontou avisos de tipografia e tokens, sem impedir os testes funcionais. A geração do banner usou a ferramenta integrada imagegen, com composição de prisma de decisões, fundo escuro e acentos âmbar. Não houve inferência Jev real.

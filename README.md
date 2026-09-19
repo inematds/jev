@@ -1,12 +1,20 @@
 # Jev Decision Lab
 
-**v1.1.1** · Laboratório educacional de decisões estruturadas.
+![Jev Decision Lab — mais recursos, uso simples: 20 casos práticos, experimentos e comparação](capa/novos-recursos-v1.2.1.png)
 
-[Guia de uso](https://inematds.github.io/jev/guia/) · [Abrir laboratório](https://inematds.github.io/jev/app/) · [Curso](https://github.com/inematds/jev-curso)
+**v1.2.1** · Um laboratório para formular, testar e comparar decisões de IA, com uma interface simples e recursos avançados quando você precisar.
 
-Explore **dez aplicações**, veja respostas didáticas, ajuste o contexto, exporte requisições e calcule custos. O cliente Python permite validar contratos, consultar a API TypeSafe e avaliar uma baseline de regras em lote.
+[Abrir laboratório](https://inematds.github.io/jev/app/) · [Guia de uso](https://inematds.github.io/jev/guia/) · [Curso em português](https://github.com/inematds/jev-curso)
 
-## Começar
+**Referência oficial de modelos, preços, modalidades e limites:** https://docs.typesafe.ai/models
+
+**Leia também: [Exageros, dúvidas e limites do Jev](docs/07-exageros-e-duvidas.md).** O documento separa capacidade documentada, hipótese, extrapolação e evidência ainda necessária.
+
+## Comece em um minuto
+
+No site público, escolha um dos **20 casos autorais**, examine contexto e critérios e explore a resposta didática. Você pode editar as perguntas, importar/exportar JSON e estimar custos sem cadastrar uma chave.
+
+Para abrir no computador:
 
 ```bash
 git clone https://github.com/inematds/jev.git
@@ -14,44 +22,89 @@ cd jev
 python3 -m jev_lab serve
 ```
 
-Abra `http://127.0.0.1:8765`. Requer Python 3.10+; o núcleo usa apenas a biblioteca padrão.
+Abra `http://127.0.0.1:8765`. Requer Python 3.10+; o núcleo usa apenas a biblioteca padrão. Não precisa instalar um framework, banco ou serviço de filas.
 
-A página pública usa **respostas autorais simuladas**, nunca apresentadas como inferência. Ao editar contexto/pergunta, a simulação é desativada; o JSON continua exportável. Casos sensíveis sempre pedem revisão.
+## O que está disponível
 
-## Comandos
+| Recurso | O que você faz |
+|---|---|
+| 20 casos com busca | Explora atendimento, evidências, agentes, skills, código, logs e mais |
+| Choice, Noul e Score | Escolhe alternativas, mede probabilidade de sim ou usa rubricas ordenadas |
+| Várias perguntas no mesmo contexto | Separa fila, urgência, suficiência e intenções |
+| Contexto textual ou JSON | Representa documentos, catálogos e estados estruturados |
+| Importação e exportação | Leva requisições para a CLI e salva resultados com procedência |
+| Política didática | Observa como limiares e abstenção mudam a revisão; nenhuma ação externa é executada |
+| Custo completo estimado | Acrescenta fallback, revisão humana e infraestrutura ao custo de entrada |
+| Experimentos em lote | Executa regras, Jev direto, híbrido ou replay em dataset rotulado |
+| Comparação e métricas | Examina macro-F1, confusão, cobertura, precisão aceita, Brier/ECE, latência e custo desconhecido |
+| Leitor de relatórios | Abre report.json no navegador e identifica erros para investigar |
+
+As respostas do site são **simulações autorais**, claramente identificadas. Editar contexto, tipo, opções ou pergunta desativa a fixture anterior. A página pública não consulta uma API; no servidor local, a consulta real precisa de chave.
+
+## Os 20 casos
+
+Os dez iniciais: afirmações, atendimento, contratos, mudanças em e-mails, modelos, verificação de etapas, agentes, navegador por candidatos, revisão clínica fictícia e alertas financeiros fictícios.
+
+Os dez adicionais: **skills, qualidade de comentários, filtro de evidências, triagem composta, intenções simultâneas, datas por candidatos, gravidade de logs, dados pessoais minimizados, assunto versus intenção e revisão de diff**.
+
+Cada caso possui estado, perguntas, fixture, explicação e próximo passo. Casos de ferramentas/navegador sugerem candidatos; não controlam agentes, navegadores ou dispositivos. Os exemplos sensíveis permanecem supervisionados.
+
+## Terminal: do exemplo ao experimento
 
 ```bash
-# Validação local, sem inferência
-python3 -m jev_lab validate exemplos/triagem-request.json
+# Listar e exportar um exemplo
+python3 -m jev_lab cases
+python3 -m jev_lab cases --id triagem-composta --out exemplos/minha-requisicao.json
 
-# Chamada real quando houver credencial
-python3 -m jev_lab ask exemplos/triagem-request.json
+# Verificar contrato, sem consumir API
+python3 -m jev_lab validate exemplos/triagem-composta-request.json
 
-# Baseline de regras; não é benchmark Jev
-python3 -m jev_lab batch data/tickets-sinteticos.jsonl --out reports/baseline
+# Consultar Jev quando houver acesso
+python3 -m jev_lab ask exemplos/triagem-composta-request.json
 
-# Testes sem chave
-python3 -m unittest discover -s tests -v
+# Experimento reproduzível, sem chave
+python3 -m jev_lab experiment data/tickets-sinteticos.jsonl --out runs/regras
 
-# Empacotar somente os arquivos públicos
-python3 scripts/build_site.py
+# Experimento com Jev real
+python3 -m jev_lab experiment data/tickets-sinteticos.jsonl --provider jev --out runs/jev
+
+# Comparar duas execuções do mesmo dataset
+python3 -m jev_lab compare runs/regras/report.json runs/jev/report.json
 ```
 
-O cliente carrega `TYPESAFE_API_KEY` do ambiente ou, em runtime, de `~/projetos/openpcbotv2/.env` e `~/projetos/wifi/.env`. Não copia a chave e não a envia ao navegador. Sem acesso ao provedor, exemplos, exportação, calculadora e baseline continuam disponíveis. A chamada real falha com mensagem explícita, sem inventar resposta.
+O comando anterior `batch` continua disponível. Para templates de outras tarefas, repetibilidade, híbrido e importação de resultados de LLM, veja **[Experimentos reproduzíveis](docs/08-experimentos.md)**. Não há adaptador LLM ao vivo: a comparação externa usa replay com hash da requisição e origem declarada.
 
-O servidor escuta somente loopback, recusa origens externas e serve uma lista fechada de arquivos. É uma ferramenta local, não um backend público multiusuário. Não expor por túnel nem alterar a interface de bind sem adicionar autenticação e limites apropriados.
+## Configuração local
 
-## Resultados verificados
+O cliente carrega `TYPESAFE_API_KEY` do ambiente ou, em runtime, de `~/projetos/openpcbotv2/.env` e `~/projetos/wifi/.env`. Não copia a chave e não a envia ao navegador. Sem acesso, exemplos, exportação, calculadora e regras continuam funcionando; chamadas reais registram falha explícita.
 
-- 14 testes automatizados do núcleo passaram, incluindo contrato, probabilidades inválidas, timeout/retries, credenciais e IDs duplicados.
-- Navegador: dez exemplos, política, edição, JSON, tema persistido e custo verificados em desktop/mobile.
-- Baseline lexical: **20/24 acertos (83,33%)**, macro-F1 **0,84235**, em dados fictícios. Consulte [métricas](reports/baseline/metrics.json).
-- **Nenhuma inferência real Jev foi executada:** não havia credencial disponível. O adaptador HTTP foi testado com respostas controladas; qualidade/latência reais permanecem por medir.
+O servidor escuta somente loopback, valida origem e serve arquivos permitidos. Serializa as consultas ao provedor. Não é um backend público multiusuário. A aplicação aceita descrições textuais, até 30 perguntas e 100 KB por payload; esses dois últimos limites são locais, não limites anunciados do Jev. Score usa 2–10 níveis e exige legend correspondente na resposta.
 
-Não há CRM, envio de mensagens, execução de agentes, pagamentos ou diagnóstico. As sugestões permanecem em observação. Não existe fallback LLM implementado; falhas levam a revisão.
+## Evidência e limites
+
+- A baseline foi reexecutada: **20/24 acertos (83,33%)**, macro-F1 **0,84235**, em tickets fictícios. [Relatório de regras](reports/experimento-regras/report.json).
+- Há um [replay didático](data/replay-didatico.jsonl) com erros intencionais e custo/latência desconhecidos. A [comparação de exemplo](reports/comparacao-didatica.json) é um exercício, não benchmark Jev.
+- Os testes verificam contratos, orçamento, falhas, duplicatas, replay, repetibilidade e políticas. O navegador verifica os 20 casos, edição, tipos, importação/exportação e leitura de relatório.
+- **Não há benchmark próprio de inferência Jev nesta entrega.** O cliente e o avaliador usam respostas controladas nos testes. Qualidade em português e calibração precisam de acesso ao modelo e referência humana.
+- Não há envio de mensagens, pagamentos, merge, diagnóstico ou execução de ferramentas. A classificação não concede permissão.
 
 ## Documentação
 
-[Análise crítica](docs/01-analise.md) · [Dez aplicações](docs/02-aplicacoes.md) · [Plano original](docs/03-plano-aplicacao.md) · [Protocolo de avaliação](docs/04-avaliacao.md) · [Custos](docs/05-custos.md) · [Fontes oficiais](fontes/README.md)
+- [Exageros, dúvidas e limites](docs/07-exageros-e-duvidas.md)
+- [Experimentos e formato de replay](docs/08-experimentos.md)
+- [O que foi agregado e o que depende de evidência](docs/09-evolucao.md)
+- [Análise conceitual](docs/01-analise.md) · [Dez aplicações iniciais](docs/02-aplicacoes.md)
+- [Plano original](docs/03-plano-aplicacao.md) · [Protocolo de avaliação](docs/04-avaliacao.md) · [Custos](docs/05-custos.md)
+- [Curso: 36 aulas e 12 laboratórios](https://github.com/inematds/jev-curso)
+- [Modelos oficiais](https://docs.typesafe.ai/models) · [API oficial](https://docs.typesafe.ai/api)
 
-Materiais recebidos ficam somente locais e ignorados pelo Git. O build público inclui apenas `app/`, `guia/`, `capa/` e a entrada do site.
+## Desenvolvimento e publicação
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 scripts/build_site.py
+```
+
+Os testes de navegador em `tests/browser.cjs` usam Playwright somente no desenvolvimento. Instale-o no ambiente de testes com `npm install --no-save --package-lock=false playwright` e `npx playwright install chromium`; a aplicação não precisa dessa dependência. `BASE_URL`, `GUIDE_URL` e `SCREENSHOT_DIR` permitem apontar o teste para os servidores e diretório de capturas escolhidos. O build publica uma lista explícita: `app/`, `guia/`, `capa/` e a entrada do site. Documentação pública fica no repositório.
+
+**Transcrições e materiais recebidos permanecem somente locais**, ignorados pelo Git e excluídos do build. Relatórios operacionais vão em `runs/`, também ignorada. Os documentos públicos são autorais, com referências oficiais. Confira o [changelog](CHANGELOG.md).

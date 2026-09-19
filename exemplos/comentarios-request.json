@@ -1,0 +1,30 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "codigo": "def dobro(valor):\n    # Multiplica o valor por dois.\n    return valor * 2"
+  },
+  "questions": {
+    "correcao": {
+      "type": "score",
+      "instructions": "O comentário descreve corretamente o corpo?",
+      "criteria": [
+        "Contradiz o código",
+        "Parcial ou ambíguo",
+        "Descreve o que o código faz"
+      ]
+    },
+    "utilidade": {
+      "type": "score",
+      "instructions": "Quanto o comentário acrescenta à leitura?",
+      "criteria": [
+        "Repete operação evidente",
+        "Esclarece detalhe pouco óbvio",
+        "Explica motivo ou restrição importante"
+      ]
+    },
+    "contradicao": {
+      "type": "noul",
+      "instructions": "Há contradição explícita entre comentário e código?"
+    }
+  }
+}

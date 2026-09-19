@@ -1,0 +1,291 @@
+{
+  "dataset_sha256": "ef1cae691734af08e7518ded117c824d47c0559f0ef2744574d420f2620d8024",
+  "same_template": true,
+  "same_policy": true,
+  "runs": [
+    {
+      "file": "reports/experimento-regras/report.json",
+      "provider": "rules",
+      "metrics": {
+        "count": 24,
+        "observations": 24,
+        "accuracy": 0.8333333333333334,
+        "macro_f1": 0.8423520923520923,
+        "coverage": 0.625,
+        "accepted_precision": 1.0,
+        "errors": 0,
+        "confusion": {
+          "suporte": {
+            "suporte": 6,
+            "insuficiente": 2
+          },
+          "cobranca": {
+            "cobranca": 4,
+            "insuficiente": 1
+          },
+          "vendas": {
+            "vendas": 5,
+            "insuficiente": 1
+          },
+          "insuficiente": {
+            "insuficiente": 5
+          }
+        },
+        "per_class": {
+          "suporte": {
+            "support": 8,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "cobranca": {
+            "support": 5,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888
+          },
+          "vendas": {
+            "support": 6,
+            "precision": 1.0,
+            "recall": 0.8333333333333334,
+            "f1": 0.9090909090909091
+          },
+          "insuficiente": {
+            "support": 5,
+            "precision": 0.5555555555555556,
+            "recall": 1.0,
+            "f1": 0.7142857142857143
+          }
+        },
+        "probability_count": 0,
+        "brier": null,
+        "ece": null,
+        "reliability_bins": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          }
+        ],
+        "repeat_label_agreement": null,
+        "latency_p50_ms": 0.007311929948627949,
+        "latency_p95_ms": 0.01603446435183286,
+        "known_cost_usd": 0.0,
+        "unknown_cost_observations": 0,
+        "cost_complete": true,
+        "correct": 20
+      },
+      "sources": [
+        "rules"
+      ]
+    },
+    {
+      "file": "reports/replay-didatico/report.json",
+      "provider": "replay",
+      "metrics": {
+        "count": 24,
+        "observations": 24,
+        "accuracy": 0.7916666666666666,
+        "macro_f1": 0.7901515151515152,
+        "coverage": 0.7916666666666666,
+        "accepted_precision": 0.7894736842105263,
+        "errors": 0,
+        "confusion": {
+          "suporte": {
+            "suporte": 6,
+            "cobranca": 2
+          },
+          "cobranca": {
+            "vendas": 1,
+            "cobranca": 4
+          },
+          "vendas": {
+            "vendas": 5,
+            "insuficiente": 1
+          },
+          "insuficiente": {
+            "insuficiente": 4,
+            "suporte": 1
+          }
+        },
+        "per_class": {
+          "suporte": {
+            "support": 8,
+            "precision": 0.8571428571428571,
+            "recall": 0.75,
+            "f1": 0.8
+          },
+          "cobranca": {
+            "support": 5,
+            "precision": 0.6666666666666666,
+            "recall": 0.8,
+            "f1": 0.7272727272727273
+          },
+          "vendas": {
+            "support": 6,
+            "precision": 0.8333333333333334,
+            "recall": 0.8333333333333334,
+            "f1": 0.8333333333333334
+          },
+          "insuficiente": {
+            "support": 5,
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8
+          }
+        },
+        "probability_count": 24,
+        "brier": 0.3881333333333333,
+        "ece": 0.14833333333333332,
+        "reliability_bins": [
+          {
+            "low": 0.0,
+            "high": 0.1,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.1,
+            "high": 0.2,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.2,
+            "high": 0.3,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.3,
+            "high": 0.4,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.4,
+            "high": 0.5,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.5,
+            "high": 0.6,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.6,
+            "high": 0.7,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.7,
+            "high": 0.8,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.8,
+            "high": 0.9,
+            "count": 0,
+            "probability_mean": null,
+            "accuracy": null
+          },
+          {
+            "low": 0.9,
+            "high": 1.0,
+            "count": 24,
+            "probability_mean": 0.94,
+            "accuracy": 0.7916666666666666
+          }
+        ],
+        "repeat_label_agreement": null,
+        "latency_p50_ms": null,
+        "latency_p95_ms": null,
+        "known_cost_usd": 0,
+        "unknown_cost_observations": 24,
+        "cost_complete": false,
+        "correct": 19
+      },
+      "sources": [
+        "replay-simulation"
+      ]
+    }
+  ],
+  "note": "Comparar qualidade final e custos. Fonte, template, política, replay e simulação precisam ser considerados antes de inferir vantagem."
+}

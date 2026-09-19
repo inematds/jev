@@ -1,0 +1,18 @@
+{
+  "model": "jev-1.13.0",
+  "state": "Quero conhecer o plano da equipe e marcar uma demonstração na próxima semana.",
+  "questions": {
+    "interesse_comercial": {
+      "type": "noul",
+      "instructions": "Há interesse explícito em conhecer ou contratar um plano?"
+    },
+    "agendamento": {
+      "type": "noul",
+      "instructions": "Há solicitação de agendamento?"
+    },
+    "prazo_confirmado": {
+      "type": "noul",
+      "instructions": "Foi confirmado um dia e horário específicos?"
+    }
+  }
+}

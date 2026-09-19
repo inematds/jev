@@ -1,0 +1,25 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "pergunta": "O produto tem pesos públicos?",
+    "passagem": {
+      "id": "p7",
+      "texto": "O acesso é por convite. Os pesos não estão disponíveis para download."
+    }
+  },
+  "questions": {
+    "decisao": {
+      "type": "choice",
+      "instructions": "Qual a relação da passagem com a hipótese de pesos públicos?",
+      "criteria": {
+        "apoia": "Confirma pesos disponíveis.",
+        "contradiz": "Nega a disponibilidade.",
+        "insuficiente": "Não permite concluir."
+      }
+    },
+    "relevante": {
+      "type": "noul",
+      "instructions": "A passagem trata da disponibilidade dos pesos?"
+    }
+  }
+}

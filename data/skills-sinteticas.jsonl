@@ -1,0 +1,8 @@
+{"id": "s01", "state": {"pedido": "Crie slides novos a partir deste roteiro."}, "expected": "criar_deck"}
+{"id": "s02", "state": {"pedido": "Mude as cores da apresentação já existente."}, "expected": "editar_deck"}
+{"id": "s03", "state": {"pedido": "Como funciona um slide mestre? Quero apenas uma explicação."}, "expected": "nenhum"}
+{"id": "s04", "state": {"pedido": "Preciso escrever um e-mail."}, "expected": "nenhum"}
+{"id": "s05", "state": {"pedido": "Atualize o título do slide 3 deste arquivo."}, "expected": "editar_deck"}
+{"id": "s06", "state": {"pedido": "Monte a primeira apresentação deste curso usando minhas anotações."}, "expected": "criar_deck"}
+{"id": "s07", "state": {"pedido": "Não altere nada; só explique a diferença entre slide e página."}, "expected": "nenhum"}
+{"id": "s08", "state": {"pedido": "Transforme este roteiro em uma apresentação inédita."}, "expected": "criar_deck"}

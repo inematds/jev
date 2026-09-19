@@ -13,3 +13,8 @@ fontes/manifest.json
 
 _site/
 node_modules/
+
+# Transcrições e análises de fontes recebidas: apenas locais
+/doc/
+# Execuções operacionais (podem conter dados privados)
+/runs/

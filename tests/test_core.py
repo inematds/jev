@@ -12,7 +12,7 @@ class Contracts(unittest.TestCase):
         self.cases=json.loads((ROOT/'app/cases.json').read_text())
         self.p=copy.deepcopy(self.cases[1]['request']); self.r=copy.deepcopy(self.cases[1]['fixture'])
     def test_all_ten_cases(self):
-        self.assertEqual(len(self.cases),10)
+        self.assertGreaterEqual(len(self.cases),20)
         for c in self.cases: validate_response(c['request'],c['fixture'])
     def test_unknown_option(self):
         self.r['answers']['decisao']['choice']='transferir-dinheiro'
@@ -36,7 +36,7 @@ class Contracts(unittest.TestCase):
         r={'model':'test','answers':{'x':{'type':'noul','noul':.05}},'usage':{'input_tokens':2,'output_tokens':1}}
         validate_response(p,r)
         p['questions']['x']={'type':'score','instructions':'nível?','criteria':['baixo','alto']}
-        r['answers']['x']={'type':'score','score':.7,'probabilities':{'0':.3,'1':.7},'confidence':.5}
+        r['answers']['x']={'type':'score','legend':{'0':'baixo','1':'alto'},'score':.7,'probabilities':{'0':.3,'1':.7},'confidence':.5}
         validate_response(p,r)
         r['answers']['x']['score']=.2
         with self.assertRaises(LabError):validate_response(p,r)

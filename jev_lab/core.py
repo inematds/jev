@@ -8,6 +8,7 @@ import unicodedata
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
+from . import __version__
 
 MODEL = 'jev-1.13.0'
 PRICE = 0.042
@@ -33,16 +34,20 @@ def validate_request(payload):
     for key, q in questions.items():
         if not isinstance(key, str) or not key or not isinstance(q, dict):
             raise LabError('Pergunta inválida.')
-        if not q.get('instructions') or q.get('type') not in ('choice', 'noul', 'score'):
+        if not isinstance(q.get('instructions'), str) or not q['instructions'].strip() or q.get('type') not in ('choice', 'noul', 'score'):
             raise LabError('Toda pergunta precisa de type e instructions.')
         criteria = q.get('criteria')
         if q['type'] == 'choice' and (not isinstance(criteria, dict) or not 2 <= len(criteria) <= 255 or any(not k or not isinstance(v, (str, type(None))) for k, v in criteria.items())):
             raise LabError('Choice precisa de 2 a 255 opções com descrições.')
-        if q['type'] == 'score' and (not isinstance(criteria, list) or len(criteria) < 2 or not all(isinstance(x, str) and x for x in criteria)):
-            raise LabError('Score precisa de pelo menos dois níveis descritos.')
-        if q['type'] == 'noul' and criteria is not None and (not isinstance(criteria, dict) or set(criteria) != {'true', 'false'}):
+        if q['type'] == 'score' and (not isinstance(criteria, list) or not 2 <= len(criteria) <= 10 or not all(isinstance(x, str) and x for x in criteria)):
+            raise LabError('Score precisa de 2 a 10 níveis descritos.')
+        if q['type'] == 'noul' and criteria is not None and (not isinstance(criteria, dict) or not set(criteria).issubset({'true', 'false'}) or not criteria or not all(isinstance(v, str) and v.strip() for v in criteria.values())):
             raise LabError('Critérios de Noul devem usar true e false.')
-    if len(json.dumps(payload).encode()) > 100_000:
+    try:
+        encoded = json.dumps(payload, allow_nan=False).encode()
+    except (ValueError, TypeError):
+        raise LabError('Use somente valores JSON finitos.') from None
+    if len(encoded) > 100_000:
         raise LabError('Requisição maior que o limite de 100 KB do laboratório.')
     return payload
 
@@ -71,6 +76,9 @@ def validate_response(payload, response):
             if a.get('choice') not in expected or p[a['choice']] + 1e-6 < max(p.values()):
                 raise LabError('Opção escolhida fora do conjunto ou inconsistente.')
         else:
+            legend = {str(i): level for i, level in enumerate(q['criteria'])}
+            if a.get('legend') != legend:
+                raise LabError('Score precisa de legend correspondente aos níveis enviados.')
             if not number(a.get('score'), 0, len(q['criteria'])-1):
                 raise LabError('Score fora dos níveis.')
             if not math.isclose(a['score'], sum(int(k)*v for k,v in p.items()), abs_tol=0.01):
@@ -109,15 +117,21 @@ def load_key():
                     return value
     raise LabError('TYPESAFE_API_KEY não configurada no ambiente ou nos arquivos autorizados. Use os exemplos offline; não envie chaves pelo navegador.')
 
-def evaluate(payload, *, key=None, timeout=5, opener=urlopen):
+def evaluate(payload, *, key=None, timeout=5, opener=urlopen, telemetry=None):
     validate_request(payload)
     key = key or load_key()
+    if not number(timeout, 0.01, 300):
+        raise LabError('Timeout deve estar entre 0,01 e 300 segundos.')
+    if telemetry is not None:
+        telemetry.update(attempts=0, retries=0)
     deadline = time.monotonic() + timeout
     for attempt in range(3):
         remaining = deadline - time.monotonic()
         if remaining <= 0:
             raise LabError('Prazo de inferência excedido. Encaminhe para revisão.')
-        req = Request('https://api.typesafe.ai/v1/systemone', data=json.dumps(payload).encode(), headers={'Authorization': 'Bearer '+key, 'Content-Type': 'application/json', 'User-Agent': 'JevDecisionLab/1.1.1'}, method='POST')
+        if telemetry is not None:
+            telemetry.update(attempts=attempt+1, retries=attempt)
+        req = Request('https://api.typesafe.ai/v1/systemone', data=json.dumps(payload).encode(), headers={'Authorization': 'Bearer '+key, 'Content-Type': 'application/json', 'User-Agent': 'JevDecisionLab/'+__version__}, method='POST')
         try:
             with opener(req, timeout=remaining) as res:
                 raw = res.read(1_000_001)
