@@ -1,0 +1,20 @@
+{
+  "model": "simulacao-autoral-nao-jev",
+  "answers": {
+    "decisao": {
+      "type": "choice",
+      "choice": "demonstracao",
+      "probabilities": {
+        "demonstracao": 0.94,
+        "informacoes": 0.02,
+        "fora_escopo": 0.02,
+        "insuficiente": 0.02
+      },
+      "confidence": 0.93
+    }
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

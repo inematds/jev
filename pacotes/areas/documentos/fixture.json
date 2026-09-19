@@ -1,0 +1,19 @@
+{
+  "model": "simulacao-autoral-nao-jev",
+  "answers": {
+    "decisao": {
+      "type": "choice",
+      "choice": "incompleto",
+      "probabilities": {
+        "completo": 0.03,
+        "incompleto": 0.94,
+        "insuficiente": 0.03
+      },
+      "confidence": 0.93
+    }
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

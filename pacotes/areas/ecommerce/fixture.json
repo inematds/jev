@@ -1,0 +1,21 @@
+{
+  "model": "simulacao-autoral-nao-jev",
+  "answers": {
+    "decisao": {
+      "type": "choice",
+      "choice": "atraso",
+      "probabilities": {
+        "atraso": 0.94,
+        "troca": 0.015,
+        "devolucao": 0.015,
+        "duvida": 0.015,
+        "insuficiente": 0.015
+      },
+      "confidence": 0.93
+    }
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

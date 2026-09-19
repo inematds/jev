@@ -1,0 +1,11 @@
+{
+  "id": "software",
+  "title": "Desenvolvimento de software",
+  "objective": "Triar relatos de bugs para o componente responsável.",
+  "sensitive": false,
+  "expected": "autenticacao",
+  "integration_point": "Use título, descrição e logs minimizados do issue como entrada.",
+  "suggested_use": "Sugerir responsável pelo issue, sem alterar código ou fazer merge.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "6711b7de88e3af4fe18e8db58bf7883cc812b3501e4ab44430966b307c80aaad"
+}

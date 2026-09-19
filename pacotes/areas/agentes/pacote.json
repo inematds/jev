@@ -1,0 +1,11 @@
+{
+  "id": "agentes",
+  "title": "Agentes e automações",
+  "objective": "Escolher entre skills cadastradas, sem executá-las.",
+  "sensitive": false,
+  "expected": "criar_apresentacao",
+  "integration_point": "Coloque o classificador antes do dispatcher das ferramentas. Use apenas IDs do catálogo permitido.",
+  "suggested_use": "Sugerir um ID; o dispatcher valida permissões, argumentos e autorização antes de executar.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "312779b2654372a83417bde62f2d198afa6eb459433b25c4b15dee6df5e820e0"
+}

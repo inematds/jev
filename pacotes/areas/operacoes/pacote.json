@@ -1,0 +1,11 @@
+{
+  "id": "operacoes",
+  "title": "Operações e projetos",
+  "objective": "Classificar pendências para revisão do responsável.",
+  "sensitive": false,
+  "expected": "dependencia",
+  "integration_point": "Use atualizações do projeto como entrada antes da reunião de acompanhamento.",
+  "suggested_use": "Sugerir tipo de pendência; manter prazo e responsável sob controle da equipe.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "14bcf8cc1c7622f6faaf43dac3c7bf155e412f1e28627ca4800de47d747401d9"
+}

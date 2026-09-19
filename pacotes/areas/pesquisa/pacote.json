@@ -1,0 +1,11 @@
+{
+  "id": "pesquisa",
+  "title": "Pesquisa e conhecimento interno",
+  "objective": "Avaliar se um trecho fornecido sustenta uma afirmação.",
+  "sensitive": false,
+  "expected": "contradiz",
+  "integration_point": "Use após recuperar trechos da base de conhecimento e antes de redigir uma resposta.",
+  "suggested_use": "Sugerir exclusão ou revisão da afirmação; não confundir suporte textual com verdade externa.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "ae37c36e78826d0089bdcde6d20509a20c0ad025dc1ad21c4aa754597af7ac89"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "ecommerce",
+  "title": "Comércio eletrônico",
+  "objective": "Organizar solicitações de pós-venda.",
+  "sensitive": false,
+  "expected": "atraso",
+  "integration_point": "Avalie o ticket com os dados de pedido estritamente necessários.",
+  "suggested_use": "Sugerir fila logística; estorno e troca dependem da política da loja e de autorização.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "c86e5eb99ac5be5a2d37be4d542140a75b3abc9f83053d99e6f73a2e6debb664"
+}

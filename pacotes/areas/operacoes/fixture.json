@@ -1,0 +1,20 @@
+{
+  "model": "simulacao-autoral-nao-jev",
+  "answers": {
+    "decisao": {
+      "type": "choice",
+      "choice": "dependencia",
+      "probabilities": {
+        "dependencia": 0.94,
+        "impedimento": 0.02,
+        "atraso": 0.02,
+        "insuficiente": 0.02
+      },
+      "confidence": 0.93
+    }
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

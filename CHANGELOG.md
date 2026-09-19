@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.3.1 — 2026-09-19
+
+- Adiciona pacotes/ com dez áreas de aplicação, requests, fixtures simuladas e instruções.
+- Inclui executor offline/API, função avaliar_area para backend e encaminhamento de falhas para revisão.
+- Bloqueia reutilização de fixture após mudar o request; cobre os dez pacotes com testes.
+- Acrescenta skill jev-integrar e guia de integração Python/subprocesso.
+
 ## v1.2.1 — 2026-09-19
 
 - Amplia para 20 casos e editor Choice/Noul/Score, múltiplas perguntas e estado JSON.

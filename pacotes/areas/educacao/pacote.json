@@ -1,0 +1,11 @@
+{
+  "id": "educacao",
+  "title": "Educação e treinamento",
+  "objective": "Aplicar uma rubrica explícita como apoio à revisão do professor.",
+  "sensitive": true,
+  "expected": "parcial",
+  "integration_point": "Use exercícios fictícios primeiro; depois avalie respostas minimizadas contra rubricas do professor.",
+  "suggested_use": "Sugerir um aspecto a complementar; nota final continua sob revisão do professor.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "e9518b872be321f3c6a08449a01dffa43ce87699c76e8e2974be3f38653ead18"
+}

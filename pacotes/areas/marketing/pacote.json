@@ -1,0 +1,11 @@
+{
+  "id": "marketing",
+  "title": "Marketing e conteúdo",
+  "objective": "Conferir se um texto respeita o briefing fornecido.",
+  "sensitive": false,
+  "expected": "revisar",
+  "integration_point": "Avalie o rascunho antes da etapa de aprovação editorial.",
+  "suggested_use": "Marcar o texto para revisão; não publicar nem comprovar fatos externos.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "02b0150120ab25fe6c90ad4be82ae07da7ec1fd754faa0fea73046dd976163be"
+}

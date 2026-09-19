@@ -1,0 +1,11 @@
+{
+  "id": "documentos",
+  "title": "Gestão de documentos",
+  "objective": "Conferir informações obrigatórias em documentos.",
+  "sensitive": false,
+  "expected": "incompleto",
+  "integration_point": "Faça a extração de texto antes desta etapa e envie o checklist junto.",
+  "suggested_use": "Apontar pendência para conferência, sem validar autenticidade ou conformidade jurídica.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "89ee3b08d381a2a37e83c35bceadcb0d6f5692c5e169824b9c3b6e2e4c2a1fdf"
+}

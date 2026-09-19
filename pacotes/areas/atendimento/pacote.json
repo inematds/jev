@@ -1,0 +1,11 @@
+{
+  "id": "atendimento",
+  "title": "Atendimento ao cliente",
+  "objective": "Classificar chamados para a fila correta.",
+  "sensitive": false,
+  "expected": "suporte",
+  "integration_point": "Insira a avaliação entre a criação do chamado e a escolha da fila.",
+  "suggested_use": "Criar uma sugestão de fila no chamado; manter o atendimento humano disponível.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "5cc6f178b8e815ea594c6560b9d3b74b6b302d47e56fbb37a849ded82715220f"
+}

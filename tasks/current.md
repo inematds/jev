@@ -10,3 +10,9 @@
 - [ ] Benchmark com Jev real e referência humana em português.
 - [ ] Calibrar política e observar tráfego antes de qualquer ação externa.
 - [ ] Escolher formato HTML do curso (v5 ou v2).
+
+- [x] Pasta pacotes/ com exemplo Python, skill de integração e índice de receitas.
+- [ ] Distribuição Python instalável e variantes de skill homologadas por runtime.
+
+- [x] Dez pacotes por atividade com contexto, critérios, fixture e documentação.
+- [x] Integração compartilhada para backend Python e CLI para outros runtimes.
