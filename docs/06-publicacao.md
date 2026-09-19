@@ -24,3 +24,15 @@ Ao escolher a versão visual do curso: ler a skill correspondente, gerar HTML a 
 Vinte casos validados; 27 testes Python passaram. Teste de navegador passou para os 20 casos, perguntas combinadas, importação/exportação, relatórios, temas, custos e layouts desktop/mobile sem overflow ou erros JavaScript. Build mantém somente app, guia, capa e entrada. Banner dos recursos adicionado ao README. Curso v1.2.0 validado: 12 módulos, 36 aulas e 12 laboratórios; casos sincronizados com o app.
 
 Mantida a identidade visual existente; o detector de estilo apontou avisos de tipografia e tokens, sem impedir os testes funcionais. A geração do banner usou a ferramenta integrada imagegen, com composição de prisma de decisões, fundo escuro e acentos âmbar. Não houve inferência Jev real.
+
+### Pushes e disponibilidade confirmados nesta atualização
+
+- Aplicação e banner: `a0dc4de` em `inematds/jev`; Pages concluído com sucesso. Laboratório v1.2.1, guia e banner retornaram HTTP 200.
+- Curso: `b37d99a` em `inematds/jev-curso`.
+- Portal: `000325b` em `NeiMaldaner/portal`.
+- Busca: `b93348d` em `inematds/inemabuscas`.
+- PRO: `ef6b5bd` em `inematds/inemapro`.
+
+Verificações dos catálogos: 7 testes do portal, TypeScript sem erros e 41 testes da base. Acervo final preservado com 18.276 IDs, incluindo 277 cursos, 234 projetos e 12.312 clipes; 100% dos cursos/projetos classificados. Conflito JSON legado resolvido sem descartar classificações. Fontes de clipes sincronizadas antes da verificação final de IDs. Correções registradas no FALHAS.md do PRO. Nenhuma consulta ao Vercel.
+
+Trabalho dos catálogos isolado em `/tmp/jev-update-20260919/` para preservar alterações preexistentes nos diretórios originais.
