@@ -15,10 +15,10 @@ Na raiz do clone Jev:
 python3 -m pacotes.executar operacoes
 
 # Dados próprios em texto UTF-8; chamada real à API
-python3 -m pacotes.executar operacoes --state-file /caminho/entrada.txt --live
+python3 -m pacotes.executar operacoes --state-file /caminho/entrada.txt --live --provider openrouter
 ```
 
-Para estado estruturado, use `--state-format json` com um arquivo JSON. Revise os dados antes de enviá-los ao provedor. Não cole chaves no contexto.
+Para estado estruturado, use `--state-format json` com um arquivo JSON. Para a consulta acima, configure `OPENROUTER_API_KEY` no backend. Revise os dados antes de enviá-los ao provedor. Não cole chaves no contexto.
 
 ## Arquivos
 

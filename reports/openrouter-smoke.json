@@ -1,0 +1,430 @@
+{
+  "date": "2026-09-19T05:30:43.785298+00:00",
+  "kind": "integration-smoke-test",
+  "provider": "openrouter",
+  "requested_model": "~typesafe/jev-latest",
+  "note": "Dados fictícios dos exemplos publicados. Uma chamada por área, sem conjunto independente. Confirma integração; não estima qualidade geral ou calibração. Latência inclui rede deste ambiente.",
+  "completed": 10,
+  "errors": 0,
+  "matches_example": 10,
+  "reported_cost_usd": 0.000184968,
+  "rows": [
+    {
+      "area": "agentes",
+      "expected": "criar_apresentacao",
+      "predicted": "criar_apresentacao",
+      "matches_example": true,
+      "latency_ms": 498.24,
+      "result": {
+        "response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "answers": {
+            "decisao": {
+              "type": "choice",
+              "choice": "criar_apresentacao",
+              "probabilities": {
+                "nenhum": 0,
+                "criar_apresentacao": 1,
+                "editar_apresentacao": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 469,
+            "output_tokens": 55,
+            "cost": 1.9698e-05
+          },
+          "id": "gen-dec-1789795839-6gpEXatgvw2Vv8VP8V8n",
+          "provider": "TypeSafe"
+        },
+        "decisions": {
+          "decisao": {
+            "action": "suggest",
+            "reason": "Sugestão em observação. Nenhuma ação externa executada."
+          }
+        },
+        "area": "agentes",
+        "origin": "api",
+        "action": "suggest",
+        "error": null
+      }
+    },
+    {
+      "area": "atendimento",
+      "expected": "suporte",
+      "predicted": "suporte",
+      "matches_example": true,
+      "latency_ms": 411.19,
+      "result": {
+        "response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "answers": {
+            "decisao": {
+              "type": "choice",
+              "choice": "suporte",
+              "probabilities": {
+                "suporte": 1,
+                "insuficiente": 0,
+                "vendas": 0,
+                "cobranca": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 412,
+            "output_tokens": 55,
+            "cost": 1.7304e-05
+          },
+          "id": "gen-dec-1789795840-ESyMgRJVEu5Pj5XSYfUA",
+          "provider": "TypeSafe"
+        },
+        "decisions": {
+          "decisao": {
+            "action": "suggest",
+            "reason": "Sugestão em observação. Nenhuma ação externa executada."
+          }
+        },
+        "area": "atendimento",
+        "origin": "api",
+        "action": "suggest",
+        "error": null
+      }
+    },
+    {
+      "area": "documentos",
+      "expected": "incompleto",
+      "predicted": "incompleto",
+      "matches_example": true,
+      "latency_ms": 479.45,
+      "result": {
+        "response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "answers": {
+            "decisao": {
+              "type": "choice",
+              "choice": "incompleto",
+              "probabilities": {
+                "completo": 0,
+                "insuficiente": 0,
+                "incompleto": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 448,
+            "output_tokens": 48,
+            "cost": 1.8816e-05
+          },
+          "id": "gen-dec-1789795840-DTU8x55YpF8DLxtQUmQq",
+          "provider": "TypeSafe"
+        },
+        "decisions": {
+          "decisao": {
+            "action": "suggest",
+            "reason": "Sugestão em observação. Nenhuma ação externa executada."
+          }
+        },
+        "area": "documentos",
+        "origin": "api",
+        "action": "suggest",
+        "error": null
+      }
+    },
+    {
+      "area": "ecommerce",
+      "expected": "atraso",
+      "predicted": "atraso",
+      "matches_example": true,
+      "latency_ms": 400.99,
+      "result": {
+        "response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "answers": {
+            "decisao": {
+              "type": "choice",
+              "choice": "atraso",
+              "probabilities": {
+                "insuficiente": 0,
+                "troca": 0,
+                "atraso": 1,
+                "duvida": 0,
+                "devolucao": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 455,
+            "output_tokens": 65,
+            "cost": 1.911e-05
+          },
+          "id": "gen-dec-1789795840-8keEeIlAIIjcKIiwXHCW",
+          "provider": "TypeSafe"
+        },
+        "decisions": {
+          "decisao": {
+            "action": "suggest",
+            "reason": "Sugestão em observação. Nenhuma ação externa executada."
+          }
+        },
+        "area": "ecommerce",
+        "origin": "api",
+        "action": "suggest",
+        "error": null
+      }
+    },
+    {
+      "area": "educacao",
+      "expected": "parcial",
+      "predicted": "parcial",
+      "matches_example": true,
+      "latency_ms": 446.61,
+      "result": {
+        "response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "answers": {
+            "decisao": {
+              "type": "choice",
+              "choice": "parcial",
+              "probabilities": {
+                "revisar": 0,
+                "parcial": 1,
+                "completo": 0,
+                "insuficiente": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 457,
+            "output_tokens": 55,
+            "cost": 1.9194e-05
+          },
+          "id": "gen-dec-1789795841-nH5SFvT8mtNjRdtW9Znx",
+          "provider": "TypeSafe"
+        },
+        "decisions": {
+          "decisao": {
+            "action": "review",
+            "reason": "Domínio supervisionado: revisão humana obrigatória."
+          }
+        },
+        "area": "educacao",
+        "origin": "api",
+        "action": "review",
+        "error": null
+      }
+    },
+    {
+      "area": "marketing",
+      "expected": "revisar",
+      "predicted": "revisar",
+      "matches_example": true,
+      "latency_ms": 380.7,
+      "result": {
+        "response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "answers": {
+            "decisao": {
+              "type": "choice",
+              "choice": "revisar",
+              "probabilities": {
+                "revisar": 1,
+                "insuficiente": 0,
+                "aderente": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 433,
+            "output_tokens": 48,
+            "cost": 1.8186e-05
+          },
+          "id": "gen-dec-1789795841-bq89ATMz2b99bRM6IVNx",
+          "provider": "TypeSafe"
+        },
+        "decisions": {
+          "decisao": {
+            "action": "review",
+            "reason": "A alternativa requer revisão ou mais informação."
+          }
+        },
+        "area": "marketing",
+        "origin": "api",
+        "action": "review",
+        "error": null
+      }
+    },
+    {
+      "area": "operacoes",
+      "expected": "dependencia",
+      "predicted": "dependencia",
+      "matches_example": true,
+      "latency_ms": 423.65,
+      "result": {
+        "response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "answers": {
+            "decisao": {
+              "type": "choice",
+              "choice": "dependencia",
+              "probabilities": {
+                "impedimento": 0,
+                "atraso": 0,
+                "insuficiente": 0,
+                "dependencia": 1
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 425,
+            "output_tokens": 60,
+            "cost": 1.785e-05
+          },
+          "id": "gen-dec-1789795842-odPakwlooNTtqvUubGHP",
+          "provider": "TypeSafe"
+        },
+        "decisions": {
+          "decisao": {
+            "action": "suggest",
+            "reason": "Sugestão em observação. Nenhuma ação externa executada."
+          }
+        },
+        "area": "operacoes",
+        "origin": "api",
+        "action": "suggest",
+        "error": null
+      }
+    },
+    {
+      "area": "pesquisa",
+      "expected": "contradiz",
+      "predicted": "contradiz",
+      "matches_example": true,
+      "latency_ms": 391.56,
+      "result": {
+        "response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "answers": {
+            "decisao": {
+              "type": "choice",
+              "choice": "contradiz",
+              "probabilities": {
+                "insuficiente": 0,
+                "contradiz": 1,
+                "sustenta": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 445,
+            "output_tokens": 49,
+            "cost": 1.869e-05
+          },
+          "id": "gen-dec-1789795842-d0N7hVO3pkTLAC4EgjC6",
+          "provider": "TypeSafe"
+        },
+        "decisions": {
+          "decisao": {
+            "action": "suggest",
+            "reason": "Sugestão em observação. Nenhuma ação externa executada."
+          }
+        },
+        "area": "pesquisa",
+        "origin": "api",
+        "action": "suggest",
+        "error": null
+      }
+    },
+    {
+      "area": "software",
+      "expected": "autenticacao",
+      "predicted": "autenticacao",
+      "matches_example": true,
+      "latency_ms": 419.92,
+      "result": {
+        "response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "answers": {
+            "decisao": {
+              "type": "choice",
+              "choice": "autenticacao",
+              "probabilities": {
+                "pagamentos": 0,
+                "autenticacao": 1,
+                "interface": 0,
+                "insuficiente": 0
+              },
+              "confidence": 1
+            }
+          },
+          "usage": {
+            "input_tokens": 435,
+            "output_tokens": 58,
+            "cost": 1.827e-05
+          },
+          "id": "gen-dec-1789795843-AGPfL6pM0O2cnFWCvhI5",
+          "provider": "TypeSafe"
+        },
+        "decisions": {
+          "decisao": {
+            "action": "suggest",
+            "reason": "Sugestão em observação. Nenhuma ação externa executada."
+          }
+        },
+        "area": "software",
+        "origin": "api",
+        "action": "suggest",
+        "error": null
+      }
+    },
+    {
+      "area": "vendas",
+      "expected": "demonstracao",
+      "predicted": "demonstracao",
+      "matches_example": true,
+      "latency_ms": 395.44,
+      "result": {
+        "response": {
+          "model": "typesafe/jev-1.13-20260917",
+          "answers": {
+            "decisao": {
+              "type": "choice",
+              "choice": "demonstracao",
+              "probabilities": {
+                "fora_escopo": 0,
+                "informacoes": 0,
+                "insuficiente": 0.01,
+                "demonstracao": 0.99
+              },
+              "confidence": 0.99
+            }
+          },
+          "usage": {
+            "input_tokens": 425,
+            "output_tokens": 62,
+            "cost": 1.785e-05
+          },
+          "id": "gen-dec-1789795843-3s3UWRQcVbMR1yseSUeL",
+          "provider": "TypeSafe"
+        },
+        "decisions": {
+          "decisao": {
+            "action": "suggest",
+            "reason": "Sugestão em observação. Nenhuma ação externa executada."
+          }
+        },
+        "area": "vendas",
+        "origin": "api",
+        "action": "suggest",
+        "error": null
+      }
+    }
+  ]
+}

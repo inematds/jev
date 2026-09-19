@@ -16,3 +16,5 @@
 
 - [x] Dez pacotes por atividade com contexto, critérios, fixture e documentação.
 - [x] Integração compartilhada para backend Python e CLI para outros runtimes.
+
+- [x] Cliente OpenRouter Decisions e consultas reais aos dez pacotes.

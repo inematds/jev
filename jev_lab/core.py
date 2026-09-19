@@ -13,6 +13,9 @@ from . import __version__
 MODEL = 'jev-1.13.0'
 PRICE = 0.042
 ROOT = Path(__file__).resolve().parents[1]
+OPENROUTER_MODEL = '~typesafe/jev-latest'
+ENDPOINTS = {'typesafe': 'https://api.typesafe.ai/v1/systemone',
+             'openrouter': 'https://openrouter.ai/api/alpha/decisions'}
 
 class LabError(ValueError):
     pass
@@ -86,6 +89,8 @@ def validate_response(payload, response):
     usage = response.get('usage')
     if not isinstance(usage, dict) or any(type(usage.get(k)) is not int or usage[k] < 0 for k in ('input_tokens', 'output_tokens')):
         raise LabError('Uso de tokens ausente ou inválido.')
+    if 'cost' in usage and not number(usage['cost'], 0, float('inf')):
+        raise LabError('Custo informado pelo provedor é inválido.')
     return response
 
 def policy(answer, *, threshold=0.9, probability=0.9, sensitive=False):
@@ -102,28 +107,45 @@ def policy(answer, *, threshold=0.9, probability=0.9, sensitive=False):
         return {'action': 'review', 'reason': 'Distribuição abaixo dos limiares didáticos.'}
     return {'action': 'suggest', 'reason': 'Sugestão em observação. Nenhuma ação externa executada.'}
 
-def load_key():
-    if os.environ.get('TYPESAFE_API_KEY', '').strip():
-        return os.environ['TYPESAFE_API_KEY'].strip()
+def selected_provider(provider=None, model=''):
+    selected = provider or os.environ.get('JEV_PROVIDER') or ('openrouter' if model.startswith(('~typesafe/', 'typesafe/')) else 'typesafe')
+    if selected not in ENDPOINTS:
+        raise LabError('Provedor inválido. Use typesafe ou openrouter.')
+    return selected
+
+def load_key(provider=None):
+    provider = selected_provider(provider)
+    name = 'OPENROUTER_API_KEY' if provider == 'openrouter' else 'TYPESAFE_API_KEY'
+    if os.environ.get(name, '').strip():
+        return os.environ[name].strip()
     for project in ('openpcbotv2', 'wifi'):
         path = Path.home()/'projetos'/project/'.env'
         if not path.is_file():
             continue
         for line in path.read_text().splitlines():
-            match = re.match(r'^\s*(?:export\s+)?TYPESAFE_API_KEY\s*=\s*(.*?)\s*$', line)
+            match = re.match(r'^\s*(?:export\s+)?'+name+r'\s*=\s*(.*?)\s*$', line)
             if match:
-                value = match[1].strip().strip('"\'')
+                value = match[1].strip().strip("\"'")
                 if value:
                     return value
-    raise LabError('TYPESAFE_API_KEY não configurada no ambiente ou nos arquivos autorizados. Use os exemplos offline; não envie chaves pelo navegador.')
+    raise LabError(name+' não configurada no ambiente ou nos arquivos autorizados. Use os exemplos offline; não envie chaves pelo navegador.')
 
-def evaluate(payload, *, key=None, timeout=5, opener=urlopen, telemetry=None):
+def evaluate(payload, *, key=None, timeout=5, opener=urlopen, telemetry=None, provider=None):
     validate_request(payload)
-    key = key or load_key()
+    provider = selected_provider(provider, payload['model'])
+    wire = dict(payload)
+    if provider == 'openrouter':
+        if wire['model'] == MODEL:
+            wire['model'] = OPENROUTER_MODEL
+        elif not wire['model'].startswith(('~typesafe/jev-', 'typesafe/jev-')):
+            raise LabError('Use um identificador Jev do OpenRouter; o modelo nativo conhecido é convertido para jev-latest.')
+    elif wire['model'].startswith(('~typesafe/', 'typesafe/')):
+        raise LabError('O identificador OpenRouter exige provider openrouter.')
+    key = key or load_key(provider)
     if not number(timeout, 0.01, 300):
         raise LabError('Timeout deve estar entre 0,01 e 300 segundos.')
     if telemetry is not None:
-        telemetry.update(attempts=0, retries=0)
+        telemetry.update(attempts=0, retries=0, provider=provider, requested_model=wire['model'])
     deadline = time.monotonic() + timeout
     for attempt in range(3):
         remaining = deadline - time.monotonic()
@@ -131,7 +153,7 @@ def evaluate(payload, *, key=None, timeout=5, opener=urlopen, telemetry=None):
             raise LabError('Prazo de inferência excedido. Encaminhe para revisão.')
         if telemetry is not None:
             telemetry.update(attempts=attempt+1, retries=attempt)
-        req = Request('https://api.typesafe.ai/v1/systemone', data=json.dumps(payload).encode(), headers={'Authorization': 'Bearer '+key, 'Content-Type': 'application/json', 'User-Agent': 'JevDecisionLab/'+__version__}, method='POST')
+        req = Request(ENDPOINTS[provider], data=json.dumps(wire).encode(), headers={'Authorization': 'Bearer '+key, 'Content-Type': 'application/json', 'User-Agent': 'JevDecisionLab/'+__version__}, method='POST')
         try:
             with opener(req, timeout=remaining) as res:
                 raw = res.read(1_000_001)

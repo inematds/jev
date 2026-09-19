@@ -77,3 +77,7 @@ O modelo documentado é `jev-1.13.0`, textual, com orçamento total de 64k token
 **Decisão deste projeto:** investir em classificação e seleção delimitadas, com evidências recuperáveis e execução controlada. Simulações continuam úteis para aprender; nenhuma delas é apresentada como garantia operacional.
 
 [Voltar ao README](../README.md) · [Executar experimentos](08-experimentos.md)
+
+## Atualização: OpenRouter confirmado
+
+Em 19/09/2026, a rota alpha Decisions respondeu a consultas com `~typesafe/jev-latest`, incluindo os dez pacotes e as três primitivas. A ausência no catálogo genérico não significou indisponibilidade. Consulte [integração, fontes e evidência](10-openrouter.md). Os resultados dos exemplos não equivalem a benchmark independente ou calibração.

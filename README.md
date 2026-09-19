@@ -2,7 +2,7 @@
 
 ![Jev Decision Lab — mais recursos, uso simples: 20 casos práticos, experimentos e comparação](capa/novos-recursos-v1.2.1.png)
 
-**v1.3.1** · Um laboratório para formular, testar e comparar decisões de IA, com uma interface simples e recursos avançados quando você precisar.
+**v1.4.1** · Um laboratório para formular, testar e comparar decisões de IA, com uma interface simples e recursos avançados quando você precisar.
 
 [Abrir laboratório](https://inematds.github.io/jev/app/) · [Guia de uso](https://inematds.github.io/jev/guia/) · [Curso em português](https://github.com/inematds/jev-curso)
 
@@ -13,6 +13,16 @@
 ## Leve para seu projeto
 
 A pasta **[pacotes/](pacotes/README.md)** reúne **dez pacotes por área**, uma integração Python, a skill `jev-integrar` e receitas de uso. Comece offline com `python3 -m pacotes.executar atendimento`. Para seu backend, veja [como integrar Jev nos sistemas](pacotes/INTEGRACAO.md). Veja em cada pacote o que já funciona e o que ainda depende de integração.
+
+## Jev real pelo OpenRouter
+
+Suporte a **`~typesafe/jev-latest`**, confirmado na Decisions API. Configure `OPENROUTER_API_KEY` no backend e execute:
+
+```bash
+python3 -m pacotes.executar atendimento --live --provider openrouter
+```
+
+Os dez pacotes foram testados com inferência real: dez respostas sem falha e dez classificações esperadas nos exemplos fictícios. Isso é um teste de integração, não benchmark independente. [Configuração e código para seu sistema](docs/10-openrouter.md) · [Relatório medido](reports/openrouter-smoke.json).
 
 ## Comece em um minuto
 
@@ -80,7 +90,7 @@ O comando anterior `batch` continua disponível. Para templates de outras tarefa
 
 ## Configuração local
 
-O cliente carrega `TYPESAFE_API_KEY` do ambiente ou, em runtime, de `~/projetos/openpcbotv2/.env` e `~/projetos/wifi/.env`. Não copia a chave e não a envia ao navegador. Sem acesso, exemplos, exportação, calculadora e regras continuam funcionando; chamadas reais registram falha explícita.
+O cliente usa `OPENROUTER_API_KEY` com OpenRouter e `TYPESAFE_API_KEY` com TypeSafe direta. Carrega a chave do ambiente ou, em runtime, de `~/projetos/openpcbotv2/.env` e `~/projetos/wifi/.env`. Não copia a chave e não a envia ao navegador. Sem acesso, exemplos, exportação, calculadora e regras continuam funcionando; chamadas reais registram falha explícita.
 
 O servidor escuta somente loopback, valida origem e serve arquivos permitidos. Serializa as consultas ao provedor. Não é um backend público multiusuário. A aplicação aceita descrições textuais, até 30 perguntas e 100 KB por payload; esses dois últimos limites são locais, não limites anunciados do Jev. Score usa 2–10 níveis e exige legend correspondente na resposta.
 
@@ -89,10 +99,12 @@ O servidor escuta somente loopback, valida origem e serve arquivos permitidos. S
 - A baseline foi reexecutada: **20/24 acertos (83,33%)**, macro-F1 **0,84235**, em tickets fictícios. [Relatório de regras](reports/experimento-regras/report.json).
 - Há um [replay didático](data/replay-didatico.jsonl) com erros intencionais e custo/latência desconhecidos. A [comparação de exemplo](reports/comparacao-didatica.json) é um exercício, não benchmark Jev.
 - Os testes verificam contratos, orçamento, falhas, duplicatas, replay, repetibilidade e políticas. O navegador verifica os 20 casos, edição, tipos, importação/exportação e leitura de relatório.
-- **Não há benchmark próprio de inferência Jev nesta entrega.** O cliente e o avaliador usam respostas controladas nos testes. Qualidade em português e calibração precisam de acesso ao modelo e referência humana.
+- **Há teste de integração real pelo OpenRouter, mas não benchmark independente.** A suíte automatizada usa respostas controladas; o relatório separado registra as dez consultas reais. Qualidade em português e calibração ainda precisam de avaliação com referência humana em dados independentes.
 - Não há envio de mensagens, pagamentos, merge, diagnóstico ou execução de ferramentas. A classificação não concede permissão.
 
 ## Documentação
+
+- [Usar Jev pelo OpenRouter](docs/10-openrouter.md)
 
 - [Exageros, dúvidas e limites](docs/07-exageros-e-duvidas.md)
 - [Experimentos e formato de replay](docs/08-experimentos.md)

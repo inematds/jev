@@ -12,6 +12,7 @@ def main():
     sub=parser.add_subparsers(dest='command', required=True)
     for name in ('validate', 'ask'):
         p=sub.add_parser(name); p.add_argument('file')
+        if name == 'ask': p.add_argument('--provider', choices=['typesafe','openrouter'])
     p=sub.add_parser('batch'); p.add_argument('file'); p.add_argument('--out', required=True)
     p=sub.add_parser('serve'); p.add_argument('--port', type=int, default=8765)
     p=sub.add_parser('experiment', help='Avaliar dataset rotulado com regras, Jev, híbrido ou replay')
@@ -61,8 +62,9 @@ def main():
         payload=json.loads(Path(args.file).read_text())
         if args.command=='validate':
             validate_request(payload); print('Contrato válido. Nenhuma chamada à API.'); return
-        result=evaluate(payload)
-        result['estimated_cost_usd']=result['usage']['input_tokens']/1_000_000*PRICE
+        result=evaluate(payload, provider=args.provider)
+        if 'cost' not in result['usage']:
+            result['estimated_cost_usd']=result['usage']['input_tokens']/1_000_000*PRICE
         print(json.dumps(result,ensure_ascii=False,indent=2))
     except (LabError, OSError, json.JSONDecodeError) as exc:
         print(str(exc), file=sys.stderr); sys.exit(2)

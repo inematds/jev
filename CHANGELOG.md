@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.4.1 — 2026-09-19
+
+- Integra OpenRouter Decisions API e alias ~typesafe/jev-latest com credencial própria.
+- Adiciona seleção de provedor na CLI, pacotes, ambiente e servidor local.
+- Preserva custo declarado e registra consultas reais dos dez pacotes, sem tratá-las como benchmark independente.
+
 ## v1.3.1 — 2026-09-19
 
 - Adiciona pacotes/ com dez áreas de aplicação, requests, fixtures simuladas e instruções.

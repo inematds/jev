@@ -35,7 +35,7 @@ def _executar(area, meta, request, evaluator, origin):
         return {'area':area, 'origin':origin, 'action':'review', 'error':str(exc), 'response':None, 'decisions':{}}
 
 
-def avaliar_area(area, state, *, evaluator=evaluate):
+def avaliar_area(area, state, *, evaluator=evaluate, provider=None):
     """Consulta real por padrão; passe evaluator para testes controlados.
 
     Preserve o evento original no seu sistema. Falhas esperadas retornam revisão.
@@ -43,7 +43,12 @@ def avaliar_area(area, state, *, evaluator=evaluate):
     """
     _, meta, request = carregar(area)
     request['state'] = state
-    return _executar(area, meta, request, evaluator, 'api' if evaluator is evaluate else 'controlled')
+    origin = 'api' if evaluator is evaluate else 'controlled'
+    if provider is not None:
+        if evaluator is not evaluate:
+            raise LabError('Use provider ou evaluator controlado, não ambos.')
+        evaluator = lambda payload: evaluate(payload, provider=provider)
+    return _executar(area, meta, request, evaluator, origin)
 
 
 def demonstrar(area):

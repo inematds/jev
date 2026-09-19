@@ -55,3 +55,5 @@ O encaminhamento usa os limiares didáticos existentes. Ajuste-os somente após 
 `decidir` não envia mensagens, chama ferramentas ou movimenta dinheiro. A aplicação de destino é responsável por permissões e execução. O exemplo de terminal precisa de `app/cases.json`; a função `decidir` e o núcleo não dependem desse arquivo.
 
 **Estado:** integração por código disponível; pacote instalável via pip e distribuição PyPI ainda não preparados.
+
+Para OpenRouter, use `JEV_PROVIDER=openrouter` no processo e `OPENROUTER_API_KEY` no servidor. Exemplo: `JEV_PROVIDER=openrouter python3 -m pacotes.python.exemplo_integracao --live`. Veja [configuração](../../docs/10-openrouter.md).

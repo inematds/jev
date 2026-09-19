@@ -18,10 +18,10 @@ class Handler(BaseHTTPRequestHandler):
         if not self.host_ok(): self.send(403,b'{}'); return
         path=urlsplit(self.path).path
         if path=='/api/status':
-            from .core import load_key
-            try: load_key(); configured=True
-            except LabError: configured=False
-            self.send(200,json.dumps({'local':True,'configured':configured}).encode()); return
+            from .core import load_key, selected_provider
+            try: provider=selected_provider(); load_key(provider); configured=True
+            except LabError: provider=None; configured=False
+            self.send(200,json.dumps({'local':True,'configured':configured,'provider':provider}).encode()); return
         paths={'/':'index.html','/index.html':'index.html','/app.js':'app.js','/app.css':'app.css','/cases.json':'cases.json'}
         if path not in paths: self.send(404,b'{}'); return
         p=ROOT/'app'/paths[path]

@@ -176,7 +176,7 @@ def run(path, *, provider='rules', template=None, question='decisao', replay=Non
                         validate_response(request,result)
                         # Retentativas podem ter custo não observado: não chamar o subtotal de total.
                         if telemetry.get('attempts',1)==1:
-                            row['cost_usd'] = result['usage']['input_tokens']/1e6*PRICE
+                            row['cost_usd'] = result['usage'].get('cost', result['usage']['input_tokens']/1e6*PRICE)
                     a=result['answers'][question]
                     row.update(predicted=a['choice'],probabilities=a['probabilities'],confidence=a['confidence'],
                                model=result['model'],input_tokens=result['usage']['input_tokens'])

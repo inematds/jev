@@ -11,6 +11,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('area', nargs='?')
     parser.add_argument('--list', action='store_true', help='Lista as dez áreas.')
+    parser.add_argument('--provider', choices=['typesafe','openrouter'], help='Provedor da consulta real; também configurável por JEV_PROVIDER.')
     parser.add_argument('--live', action='store_true', help='Consulta real; envia contexto à TypeSafe e pode consumir créditos.')
     parser.add_argument('--state-file', type=Path, help='Arquivo UTF-8 com o contexto completo.')
     parser.add_argument('--state-format', choices=['text','json'], default='text')
@@ -30,7 +31,7 @@ def main():
                     raise LabError('Arquivo de contexto excede 100 KB.')
                 text = args.state_file.read_text(encoding='utf-8')
                 state = json.loads(text) if args.state_format == 'json' else text
-            result = avaliar_area(args.area, state)
+            result = avaliar_area(args.area, state, provider=args.provider)
         else:
             result = demonstrar(args.area)
         print(json.dumps(result, ensure_ascii=False, indent=2))

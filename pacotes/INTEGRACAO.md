@@ -42,7 +42,7 @@ from pacotes.integracao import avaliar_area
 
 # Exemplo de evento fictício que já pertence ao seu sistema.
 ticket = {'id': 'TESTE-123', 'texto': 'Paguei a mesma fatura duas vezes.'}
-resultado = avaliar_area('atendimento', ticket['texto'])
+resultado = avaliar_area('atendimento', ticket['texto'], provider='openrouter')
 
 if resultado['action'] == 'review':
     registro = {'ticket_id': ticket['id'], 'status': 'revisao',
@@ -55,7 +55,7 @@ else:
 print(registro)  # Troque pelo armazenamento do seu sistema.
 ```
 
-`avaliar_area` faz uma **consulta real** por padrão. Configure `TYPESAFE_API_KEY` no ambiente do backend ou no gerenciador de segredos. O cliente mantém a leitura dos arquivos locais autorizados descrita no README principal. Nunca envie a chave para o navegador.
+`avaliar_area` faz uma **consulta real** por padrão. No exemplo acima, configure `OPENROUTER_API_KEY` no ambiente do backend ou no gerenciador de segredos. O cliente mantém a leitura dos arquivos locais autorizados descrita no README principal. Nunca envie a chave para o navegador.
 
 Falha de rede, chave ausente ou resposta inválida encaminha para revisão com `response: null`; não inventa uma classificação. Preserve o evento no seu banco antes da consulta, para uma falha não apagar o trabalho. Erros de configuração do pacote, como área inexistente, devem ser corrigidos pelo integrador.
 
@@ -66,7 +66,7 @@ Os limiares da política são didáticos, não calibrados para seu negócio. Nou
 Um backend Node.js, PHP, Java ou um orquestrador pode executar o comando abaixo com argumentos separados, sem concatenar dados em um comando de shell:
 
 ```bash
-python3 -m pacotes.executar atendimento --state-file /caminho/ticket.txt --live
+python3 -m pacotes.executar atendimento --state-file /caminho/ticket.txt --live --provider openrouter
 ```
 
 - Entrada: arquivo UTF-8 protegido, criado pelo seu backend. Para JSON, adicione `--state-format json`.
@@ -82,3 +82,5 @@ Se o volume exigir HTTP, coloque o cliente atrás de uma rota autenticada **do s
 Comece com as dez demonstrações offline. Em seguida, use eventos rotulados por pessoas, com exemplos incompletos, conflitantes e fora do escopo. Veja [experimentos](../docs/08-experimentos.md). Rode primeiro em observação: registre a sugestão sem alterar o encaminhamento real.
 
 As fixtures são inventadas e seus hashes impedem reutilizá-las silenciosamente após editar o request. Um hash prova correspondência do exemplo, não qualidade nem origem do modelo. Não há benchmark Jev real nesta entrega.
+
+Integração OpenRouter e as dez consultas reais estão documentadas em [Jev pelo OpenRouter](../docs/10-openrouter.md). TypeSafe direta permanece disponível com `provider="typesafe"` e `TYPESAFE_API_KEY`.

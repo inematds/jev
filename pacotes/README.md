@@ -34,4 +34,4 @@ pacotes/
 
 O cliente continua em [`jev_lab/`](../jev_lab/); os templates continuam em [`exemplos/`](../exemplos/). Assim, correções ficam em uma fonte única.
 
-**Limites desta primeira entrega:** não existe distribuição no PyPI, instalador universal ou conector pronto para n8n. A skill orienta a integração, mas não executa outras skills. A inferência real requer acesso à TypeSafe e ainda não tem benchmark próprio neste projeto. Publicação e instalação de pacotes não concedem permissão para executar ações externas.
+**Limites desta primeira entrega:** não existe distribuição no PyPI, instalador universal ou conector pronto para n8n. A skill orienta a integração, mas não executa outras skills. A inferência real funciona via OpenRouter ou TypeSafe direta. Há dez consultas reais de integração, sem benchmark independente. Veja [OpenRouter](../docs/10-openrouter.md). Publicação e instalação de pacotes não concedem permissão para executar ações externas.
