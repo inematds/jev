@@ -94,3 +94,7 @@ Em 19/09/2026, a rota alpha Decisions respondeu a consultas com `~typesafe/jev-l
 - **Trading rápido:** baixa latência e baixa tarifa não demonstram capacidade preditiva, lucro ou adequação operacional. Não incorporamos execução financeira.
 
 A v1.6.1 transforma as aplicações pertinentes em sete pacotes e adiciona lote e avaliação por pergunta. Fixtures dos novos pacotes não são benchmark. [Como executar e validar](11-fluxos-praticos.md).
+
+## Procedência, métricas e exemplos corrigidos
+
+A análise de uma nova referência educacional encontrou divergência entre a descrição de chamadas reais na abertura e transcrições sintéticas na aula. Acerto por etiqueta e por chamada completa não são equivalentes. Corrigir critérios num caso conhecido também não comprova generalização. [Análise e roteiro autoral](12-piloto-e-composicao.md).

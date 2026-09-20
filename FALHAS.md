@@ -1,5 +1,7 @@
 # Falhas corrigidas nos materiais derivados
 
+| 2026-09-20 | Fixture da composição omitia model e usava question em vez de instructions | Corrigir a fixture conforme o contrato antes de validar a função | prompt |
+
 | data | o que quebrou | menor correção | prompt \| infra |
 |---|---|---|---|
 | 2026-09-19 | leitura da análise assumiu exemplos/emails-request.json inexistente | consultar o caso emails em app/cases.json antes de resolver o caminho | prompt |

@@ -4,9 +4,9 @@
 
 ![Jev Decision Lab — mais recursos, uso simples: 20 casos práticos, experimentos e comparação](capa/novos-recursos-v1.2.1.png)
 
-**v1.6.1** · Um laboratório para formular, testar e comparar decisões de IA, com uma interface simples e recursos avançados quando você precisar.
+**v1.7.1** · Um laboratório para formular, testar e comparar decisões de IA, com uma interface simples e recursos avançados quando você precisar.
 
-[Abrir laboratório](https://inematds.github.io/jev/app/) · [Guia de uso](https://inematds.github.io/jev/guia/) · [Curso em português](https://github.com/inematds/jev-curso)
+[Abrir laboratório](https://inematds.github.io/jev/app/) · [Guia de uso](https://inematds.github.io/jev/guia/) · [Curso em português](https://inematds.github.io/jev-curso/)
 
 [Acervo Jev no Eventos INEMA](https://eventos.inema.pro/jev/) — projeto, curso e pacotes reunidos em uma página, com apresentação em português, inglês e espanhol.
 
@@ -135,7 +135,7 @@ O servidor escuta somente loopback, valida origem e serve arquivos permitidos. S
 - [O que foi agregado e o que depende de evidência](docs/09-evolucao.md)
 - [Análise conceitual](docs/01-analise.md) · [Dez aplicações iniciais](docs/02-aplicacoes.md)
 - [Plano original](docs/03-plano-aplicacao.md) · [Protocolo de avaliação](docs/04-avaliacao.md) · [Custos](docs/05-custos.md)
-- [Curso: 36 aulas e 12 laboratórios](https://github.com/inematds/jev-curso)
+- [Curso: 36 aulas e 12 laboratórios](https://inematds.github.io/jev-curso/)
 - [Modelos oficiais](https://docs.typesafe.ai/models) · [API oficial](https://docs.typesafe.ai/api)
 
 ## Desenvolvimento e publicação
@@ -148,3 +148,7 @@ python3 scripts/build_site.py
 Os testes de navegador em `tests/browser.cjs` usam Playwright somente no desenvolvimento. Instale-o no ambiente de testes com `npm install --no-save --package-lock=false playwright` e `npx playwright install chromium`; a aplicação não precisa dessa dependência. `BASE_URL`, `GUIDE_URL` e `SCREENSHOT_DIR` permitem apontar o teste para os servidores e diretório de capturas escolhidos. O build publica uma lista explícita: `app/`, `guia/`, `capa/` e a entrada do site. Documentação pública fica no repositório.
 
 **Transcrições e materiais recebidos permanecem somente locais**, ignorados pelo Git e excluídos do build. Relatórios operacionais vão em `runs/`, também ignorada. Os documentos públicos são autorais, com referências oficiais. Confira o [changelog](CHANGELOG.md).
+
+## Roteiro de piloto e composição
+
+[Planeje uma decisão, escreva casos de fronteira e combine rubricas Score](docs/12-piloto-e-composicao.md). A função `pacotes.composicao.compor` valida os dados e calcula um índice ponderado; não representa confiança nem autoriza ações. [Curso HTML v2](https://inematds.github.io/jev-curso/) com 36 aulas, progresso e roteiro pessoal.

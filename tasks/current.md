@@ -9,7 +9,7 @@
 - [x] Curso enriquecido e quatro laboratórios adicionais.
 - [ ] Benchmark com Jev real e referência humana em português.
 - [ ] Calibrar política e observar tráfego antes de qualquer ação externa.
-- [ ] Escolher formato HTML do curso (v5 ou v2).
+- [x] Usuário escolheu formato HTML v2 em 20/09/2026.
 
 - [x] Pasta pacotes/ com exemplo Python, skill de integração e índice de receitas.
 - [ ] Distribuição Python instalável e avaliação de comportamento dos agentes.

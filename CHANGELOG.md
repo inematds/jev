@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.7.1 — 2026-09-20
+
+- Composição validada de rubricas Score com pesos e normalização; índice sem significado probabilístico.
+- Roteiro de piloto, exemplos de fronteira e atenção à atribuição de falante.
+- Referência ao curso HTML v2 e análise da procedência de demonstrações.
+- 56 testes automatizados; nenhuma nova chamada de inferência real nesta versão.
+
 ## Documentação do ecossistema — 2026-09-19
 
 - Vincula o acervo Eventos INEMA nos três idiomas e registra o curso irmão v1.3.0.

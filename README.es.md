@@ -4,9 +4,9 @@
 
 ![Jev Decision Lab — más funciones, uso sencillo: 20 casos prácticos, experimentos y comparación](capa/novos-recursos-v1.2.1.png)
 
-**v1.6.1** · Un laboratorio para formular, probar y comparar decisiones de IA, con una interfaz sencilla y funciones avanzadas cuando las necesites.
+**v1.7.1** · Un laboratorio para formular, probar y comparar decisiones de IA, con una interfaz sencilla y funciones avanzadas cuando las necesites.
 
-[Abrir laboratorio](https://inematds.github.io/jev/app/) · [Guía de uso](https://inematds.github.io/jev/guia/) · [Curso en portugués](https://github.com/inematds/jev-curso)
+[Abrir laboratorio](https://inematds.github.io/jev/app/) · [Guía de uso](https://inematds.github.io/jev/guia/) · [Curso en portugués](https://inematds.github.io/jev-curso/)
 
 [Acervo Jev en Eventos INEMA](https://eventos.inema.pro/jev/es/) — proyecto, curso y paquetes reunidos en una página, con presentación en portugués, inglés y español.
 
@@ -136,7 +136,7 @@ El servidor escucha únicamente en loopback, valida el origen y sirve archivos p
 - [Qué se incorporó y qué depende de evidencia](docs/09-evolucao.md)
 - [Análisis conceptual](docs/01-analise.md) · [Diez aplicaciones iniciales](docs/02-aplicacoes.md)
 - [Plan original](docs/03-plano-aplicacao.md) · [Protocolo de evaluación](docs/04-avaliacao.md) · [Costes](docs/05-custos.md)
-- [Curso: 36 lecciones y 12 laboratorios](https://github.com/inematds/jev-curso)
+- [Curso: 36 lecciones y 12 laboratorios](https://inematds.github.io/jev-curso/)
 - [Modelos oficiales](https://docs.typesafe.ai/models) · [API oficial](https://docs.typesafe.ai/api)
 
 ## Desarrollo y publicación
@@ -149,3 +149,7 @@ python3 scripts/build_site.py
 Las pruebas de navegador de `tests/browser.cjs` utilizan Playwright solo durante el desarrollo. Instálalo en el entorno de pruebas con `npm install --no-save --package-lock=false playwright` y `npx playwright install chromium`; la aplicación no necesita esta dependencia. `BASE_URL`, `GUIDE_URL` y `SCREENSHOT_DIR` permiten elegir los servidores y el directorio de capturas de la prueba. El build publica una lista explícita: `app/`, `guia/`, `capa/` y la entrada del sitio. La documentación pública permanece en el repositorio.
 
 **Las transcripciones y los materiales recibidos permanecen únicamente en local**, ignorados por Git y excluidos del build. Los informes operativos van en `runs/`, también ignorada. Los documentos públicos son originales, con referencias oficiales. Consulta el [changelog](CHANGELOG.md).
+
+## Plan del piloto y puntuación compuesta
+
+[Planifica una decisión, define casos límite y combina rúbricas Score](docs/12-piloto-e-composicao.md) (portugués). `pacotes.composicao.compor` valida los datos y calcula un índice ponderado; no representa confianza ni autorización. El [curso HTML v2](https://inematds.github.io/jev-curso/) ofrece 36 lecciones, progreso y un plan personal (portugués).

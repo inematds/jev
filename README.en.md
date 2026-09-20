@@ -4,9 +4,9 @@
 
 ![Jev Decision Lab — more features, simple to use: 20 practical cases, experiments and comparisons](capa/novos-recursos-v1.2.1.png)
 
-**v1.6.1** · A lab for defining, testing and comparing AI decisions, with a simple interface and advanced features when you need them.
+**v1.7.1** · A lab for defining, testing and comparing AI decisions, with a simple interface and advanced features when you need them.
 
-[Open the lab](https://inematds.github.io/jev/app/) · [User guide](https://inematds.github.io/jev/guia/) · [Course in Portuguese](https://github.com/inematds/jev-curso)
+[Open the lab](https://inematds.github.io/jev/app/) · [User guide](https://inematds.github.io/jev/guia/) · [Course in Portuguese](https://inematds.github.io/jev-curso/)
 
 [Jev collection at INEMA Events](https://eventos.inema.pro/jev/en/) — project, course and packages together on one page, presented in Portuguese, English and Spanish.
 
@@ -136,7 +136,7 @@ The server listens only on loopback, validates origins and serves allowlisted fi
 - [What was added and what still needs evidence](docs/09-evolucao.md)
 - [Conceptual analysis](docs/01-analise.md) · [Ten initial applications](docs/02-aplicacoes.md)
 - [Original plan](docs/03-plano-aplicacao.md) · [Evaluation protocol](docs/04-avaliacao.md) · [Costs](docs/05-custos.md)
-- [Course: 36 lessons and 12 labs](https://github.com/inematds/jev-curso)
+- [Course: 36 lessons and 12 labs](https://inematds.github.io/jev-curso/)
 - [Official models](https://docs.typesafe.ai/models) · [Official API](https://docs.typesafe.ai/api)
 
 ## Development and publication
@@ -149,3 +149,7 @@ python3 scripts/build_site.py
 Browser tests in `tests/browser.cjs` use Playwright only during development. Install it in your test environment with `npm install --no-save --package-lock=false playwright` and `npx playwright install chromium`; the application does not require this dependency. `BASE_URL`, `GUIDE_URL` and `SCREENSHOT_DIR` let you select the servers and screenshot directory for the test. The build publishes an explicit list: `app/`, `guia/`, `capa/` and the site entry point. Public documentation stays in the repository.
 
 **Transcripts and supplied materials remain local only**, ignored by Git and excluded from the build. Operational reports go into `runs/`, also ignored. Public documents are original work with official references. See the [changelog](CHANGELOG.md).
+
+## Pilot worksheet and composite scoring
+
+[Plan one decision, write boundary cases and combine Score rubrics](docs/12-piloto-e-composicao.md) (Portuguese). `pacotes.composicao.compor` validates the data and computes a weighted index; it is neither confidence nor authorization. The [HTML v2 course](https://inematds.github.io/jev-curso/) offers 36 lessons, progress tracking and a personal worksheet (Portuguese).
