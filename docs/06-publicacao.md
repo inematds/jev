@@ -36,3 +36,7 @@ Mantida a identidade visual existente; o detector de estilo apontou avisos de ti
 Verificações dos catálogos: 7 testes do portal, TypeScript sem erros e 41 testes da base. Acervo final preservado com 18.276 IDs, incluindo 277 cursos, 234 projetos e 12.312 clipes; 100% dos cursos/projetos classificados. Conflito JSON legado resolvido sem descartar classificações. Fontes de clipes sincronizadas antes da verificação final de IDs. Correções registradas no FALHAS.md do PRO. Nenhuma consulta ao Vercel.
 
 Trabalho dos catálogos isolado em `/tmp/jev-update-20260919/` para preservar alterações preexistentes nos diretórios originais.
+
+## Atualização de 20/09/2026
+
+Jev v1.7.1: função de composição de Score e roteiro de piloto; 56 testes Python passaram e build público concluído. Curso v1.4.0: 18 páginas HTML v2 responderam HTTP 200, com 36 aulas e 72 etapas. Portal, Eventos e catálogos receberam o destino HTML; README em PT/EN/ES atualizado. Nenhuma nova inferência real foi feita nesta atualização.

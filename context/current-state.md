@@ -4,7 +4,7 @@
 
 Score limitado a 2–10 níveis, legend validada. Baseline reexecutada: 20/24 fictícios; não há benchmark Jev real. Exemplos e replay são autorais simulados. Conteúdo recebido em doc/ e fontes/originais/ permanece local e excluído do build.
 
-Curso irmão v1.3.0: 36 aulas enriquecidas, 12 laboratórios e 20 casos. Formato v2 escolhido; curso HTML em publicação. Publicação via git; consultar docs/06-publicacao.md para evidências.
+Curso irmão v1.3.0: 36 aulas enriquecidas, 12 laboratórios e 20 casos. Curso HTML v2 publicado em https://inematds.github.io/jev-curso/. Publicação via git; consultar docs/06-publicacao.md para evidências.
 
 Pacotes iniciais em pacotes/: adaptador Python que usa o núcleo existente, skill jev-integrar e índice de receitas. Exemplo offline disponível; sem distribuição PyPI nem instalação global.
 
