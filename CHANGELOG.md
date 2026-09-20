@@ -1,5 +1,9 @@
 # Changelog
 
+## Documentação do ecossistema — 2026-09-19
+
+- Vincula o acervo Eventos INEMA nos três idiomas e registra o curso irmão v1.3.0.
+
 ## v1.6.1 — 2026-09-19
 
 - Adiciona sete pacotes de fluxos práticos, totalizando 17, com perguntas combinadas e fixtures identificadas.

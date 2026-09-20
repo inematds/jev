@@ -8,6 +8,8 @@
 
 [Abrir laboratorio](https://inematds.github.io/jev/app/) · [Guía de uso](https://inematds.github.io/jev/guia/) · [Curso en portugués](https://github.com/inematds/jev-curso)
 
+[Acervo Jev en Eventos INEMA](https://eventos.inema.pro/jev/es/) — proyecto, curso y paquetes reunidos en una página, con presentación en portugués, inglés y español.
+
 Este README está traducido al español. La interfaz, la documentación enlazada del proyecto, el curso y el contenido de los ejemplos siguen en portugués. Los comandos, las rutas y los identificadores conservan su escritura original para que puedas ejecutarlos tal como aparecen.
 
 **Referencia oficial de modelos, precios, modalidades y límites:** https://docs.typesafe.ai/models

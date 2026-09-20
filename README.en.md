@@ -8,6 +8,8 @@
 
 [Open the lab](https://inematds.github.io/jev/app/) · [User guide](https://inematds.github.io/jev/guia/) · [Course in Portuguese](https://github.com/inematds/jev-curso)
 
+[Jev collection at INEMA Events](https://eventos.inema.pro/jev/en/) — project, course and packages together on one page, presented in Portuguese, English and Spanish.
+
 This README is translated into English. The interface, linked project documentation, course and example content remain in Portuguese. Commands, paths and identifiers below retain their original spelling so you can run them as written.
 
 **Official reference for models, pricing, modalities and limits:** https://docs.typesafe.ai/models

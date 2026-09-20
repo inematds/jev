@@ -8,6 +8,8 @@
 
 [Abrir laboratório](https://inematds.github.io/jev/app/) · [Guia de uso](https://inematds.github.io/jev/guia/) · [Curso em português](https://github.com/inematds/jev-curso)
 
+[Acervo Jev no Eventos INEMA](https://eventos.inema.pro/jev/) — projeto, curso e pacotes reunidos em uma página, com apresentação em português, inglês e espanhol.
+
 **Referência oficial de modelos, preços, modalidades e limites:** https://docs.typesafe.ai/models
 
 **Leia também: [Exageros, dúvidas e limites do Jev](docs/07-exageros-e-duvidas.md).** O documento separa capacidade documentada, hipótese, extrapolação e evidência ainda necessária.
