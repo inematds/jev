@@ -1,5 +1,10 @@
 # Changelog
 
+## Documentação — 2026-09-21
+
+- Referências Laya INEMA, código original e model card nos READMEs, análise e guia.
+- Resumo da avaliação local e do piloto proposto, sem anunciar integração operacional.
+
 ## v1.7.1 — 2026-09-20
 
 - Composição validada de rubricas Score com pesos e normalização; índice sem significado probabilístico.

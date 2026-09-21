@@ -21,3 +21,5 @@ Verificação v1.6.1: 52 testes automatizados passaram; sete demonstrações e s
 20/09/2026 · v1.7.1: composição Score validada, roteiro de piloto e casos de fronteira; 56 testes passam. Nenhuma nova inferência real. Curso irmão v1.4.0 em HTML v2.
 
 21/09/2026: pendências registradas em tasks/current.md; análise local do Laya em docs/13-analise-laya.md. Verificados 14 testes da aplicação Laya e compatibilidade estrutural de 16 respostas já salvas. Não houve nova inferência ou integração operacional.
+
+21/09/2026: referências públicas Laya agregadas aos READMEs PT/EN/ES e ao guia (#laya), com seção correspondente no Eventos. Adaptador e inferência comparativa continuam pendentes.

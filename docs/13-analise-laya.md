@@ -74,3 +74,14 @@ Um laboratório opcional “mesma decisão, dois provedores” nos módulos 9–
 Só propor uso operacional depois de mostrar resultados no conjunto separado, custo/latência medidos no hardware de destino, política de revisão por classe e possibilidade de desligar o provedor. O ganho esperado é ter uma opção local testável; superioridade sobre Jev ainda precisa ser demonstrada.
 
 Ver [pendências do projeto](../tasks/current.md) e [roteiro do piloto](12-piloto-e-composicao.md).
+
+## Referências públicas para acompanhar o Laya
+
+Endereços conferidos em 21/09/2026. Estas referências complementam a análise local acima; os benchmarks publicados por terceiros não passam a ser resultados do nosso projeto.
+
+- [Laya INEMA](https://github.com/inematds/laya): repositório da nossa adaptação. Consulte seu README para o estado publicado mais recente; a análise acima registra a árvore local no momento da inspeção.
+- [Código original do Laya](https://github.com/NandhaKishorM/laya): implementação de origem, Router, exemplos e pesquisa.
+- [Model card e arquivos dos modelos](https://huggingface.co/convaiinnovations/laya): família de checkpoints, instruções e limitações declaradas pelo fornecedor.
+- [Laya na área Jev do Eventos](https://eventos.inema.pro/jev/#laya): resumo do papel proposto, evidências e próximos passos.
+
+O próprio model card informa que os números Jev usados em sua comparação vêm de terceiros, com prompts e amostras diferentes. Portanto, essa tabela não substitui a comparação controlada proposta neste documento.

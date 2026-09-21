@@ -157,3 +157,9 @@ Las pruebas de navegador de `tests/browser.cjs` utilizan Playwright solo durante
 ## Pendientes y alternativa local
 
 [Pendientes confirmados](tasks/current.md) · [Análisis de Laya para comparar con Jev y realizar un piloto en el bot v3](docs/13-analise-laya.md) (portugués). La integración con Laya está propuesta, todavía no implementada.
+
+### Referencias de Laya
+
+Laya es un candidato local para un piloto comparativo. El análisis y las referencias están disponibles; el adaptador de Jev y la integración con el bot siguen pendientes.
+
+[Laya INEMA](https://github.com/inematds/laya) · [Código original](https://github.com/NandhaKishorM/laya) · [Modelos y ficha del modelo](https://huggingface.co/convaiinnovations/laya) · [Laya en Eventos](https://eventos.inema.pro/jev/#laya)
