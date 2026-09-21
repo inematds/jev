@@ -24,3 +24,19 @@
 - [x] Executor de lotes JSONL com prévia, limite, concorrência e retomada.
 - [x] Avaliação por pergunta Choice/Noul/Score, sem alegar calibração.
 - [ ] Conectores de eventos, extensão de navegador e integração de notas no bot.
+
+## Pendências confirmadas em 21/09/2026
+
+- [ ] Montar referência humana em português e comparar regras, Jev e alternativa local em conjunto separado do ajuste.
+- [ ] Executar e registrar inferência real nos sete pacotes novos: caixa-entrada, comentarios-youtube, comunidades, reunioes, cortes, notas e curadoria.
+- [ ] Calibrar políticas por atividade/classe e estabelecer quando encaminhar para revisão humana.
+- [ ] Implementar conectores selecionados de e-mail, CRM e reuniões; os exemplos atuais não são conectores operacionais.
+- [ ] Avaliar uma tarefa do OpenPCBot v3 em observação antes de permitir influência em ações.
+- [ ] Experimentar adaptador Laya opcional com proteção contra truncamento, procedência e validação completa.
+- [ ] Comparar Laya e Jev com mesmas entradas, rubricas e referência; medir recursos locais e latência completa.
+- [ ] Se houver benefício comprovado, integrar Laya pelo gateway de custo do bot v3, inicialmente só em observação.
+- [ ] Considerar laboratório opcional de comparação de provedores no curso, depois do piloto.
+
+Prioridade: escolher uma única triagem do bot e obter evidência antes de ampliar integrações.
+
+- [x] [Análise local do Laya salva](../docs/13-analise-laya.md); 14 testes da aplicação passaram e 16 respostas existentes foram validadas estruturalmente pelo Jev. Nenhuma nova inferência.

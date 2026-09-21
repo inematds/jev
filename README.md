@@ -152,3 +152,7 @@ Os testes de navegador em `tests/browser.cjs` usam Playwright somente no desenvo
 ## Roteiro de piloto e composição
 
 [Planeje uma decisão, escreva casos de fronteira e combine rubricas Score](docs/12-piloto-e-composicao.md). A função `pacotes.composicao.compor` valida os dados e calcula um índice ponderado; não representa confiança nem autoriza ações. [Curso HTML v2](https://inematds.github.io/jev-curso/) com 36 aulas, progresso e roteiro pessoal.
+
+## Próximos passos e alternativa local
+
+[Pendências confirmadas](tasks/current.md#pendências-confirmadas-em-21092026) · [Análise do Laya para comparação com Jev e piloto no bot v3](docs/13-analise-laya.md). A integração Laya é proposta, ainda não implementada.

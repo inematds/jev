@@ -153,3 +153,7 @@ Las pruebas de navegador de `tests/browser.cjs` utilizan Playwright solo durante
 ## Plan del piloto y puntuación compuesta
 
 [Planifica una decisión, define casos límite y combina rúbricas Score](docs/12-piloto-e-composicao.md) (portugués). `pacotes.composicao.compor` valida los datos y calcula un índice ponderado; no representa confianza ni autorización. El [curso HTML v2](https://inematds.github.io/jev-curso/) ofrece 36 lecciones, progreso y un plan personal (portugués).
+
+## Pendientes y alternativa local
+
+[Pendientes confirmados](tasks/current.md) · [Análisis de Laya para comparar con Jev y realizar un piloto en el bot v3](docs/13-analise-laya.md) (portugués). La integración con Laya está propuesta, todavía no implementada.

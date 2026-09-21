@@ -153,3 +153,7 @@ Browser tests in `tests/browser.cjs` use Playwright only during development. Ins
 ## Pilot worksheet and composite scoring
 
 [Plan one decision, write boundary cases and combine Score rubrics](docs/12-piloto-e-composicao.md) (Portuguese). `pacotes.composicao.compor` validates the data and computes a weighted index; it is neither confidence nor authorization. The [HTML v2 course](https://inematds.github.io/jev-curso/) offers 36 lessons, progress tracking and a personal worksheet (Portuguese).
+
+## Pending work and local alternative
+
+[Confirmed pending work](tasks/current.md) · [Laya analysis for comparison with Jev and a bot v3 pilot](docs/13-analise-laya.md) (Portuguese). The Laya integration is proposed, not implemented.

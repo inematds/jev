@@ -19,3 +19,5 @@ Atualização v1.6.1: 17 pacotes (sete novos com perguntas combinadas), pacotes.
 Verificação v1.6.1: 52 testes automatizados passaram; sete demonstrações e sete avaliações simuladas rodaram pela CLI; prévia JSONL sem chamadas, links locais, comandos equivalentes nos três idiomas e build verificados.
 
 20/09/2026 · v1.7.1: composição Score validada, roteiro de piloto e casos de fronteira; 56 testes passam. Nenhuma nova inferência real. Curso irmão v1.4.0 em HTML v2.
+
+21/09/2026: pendências registradas em tasks/current.md; análise local do Laya em docs/13-analise-laya.md. Verificados 14 testes da aplicação Laya e compatibilidade estrutural de 16 respostas já salvas. Não houve nova inferência ou integração operacional.
