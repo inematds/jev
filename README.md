@@ -48,6 +48,12 @@ Os dez pacotes originais foram testados com inferência real: dez respostas sem 
 
 [Instalação e exemplos da skill](pacotes/skills/jev-decidir/README.md) · [Integração no bot](https://github.com/inematds/openpcbotv3/blob/main/docs/JEV.md). A consulta direta usa o cliente deste repo; o bot conserva seu próprio gateway e seu roteador em modo de observação.
 
+## Uma porta só para as consultas: jev-gw
+
+Quando a consulta ao Jev sai de vários pontos do mesmo sistema, o **[jev-gw](https://github.com/inematds/jev-gw)** concentra tudo numa porta: teto de gasto diário conferido antes de cada consulta, cache por pedido idêntico, registro de custo e latência, e falha conservadora — Jev fora do ar, chave errada ou teto estourado devolvem revisão em vez de quebrar quem chamou. Biblioteca Python, serviço HTTP e CLI, só biblioteca padrão. Usa o cliente deste repositório, vendorizado.
+
+[Guia](https://inematds.github.io/jev-gw/guia/) · [Arquitetura](https://github.com/inematds/jev-gw/blob/main/ARQUITETURA.md)
+
 ## Comece em um minuto
 
 No site público, escolha um dos **20 casos autorais**, examine contexto e critérios e explore a resposta didática. Você pode editar as perguntas, importar/exportar JSON e estimar custos sem cadastrar uma chave.
