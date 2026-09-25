@@ -7,7 +7,7 @@ Comece pelo seu objetivo. Esta pasta reúne os recursos de integração do Jev D
 | Usar decisões no meu código | [Python](python/README.md) | Função de integração e exemplo executável offline ou com API |
 | Consultar Jev dentro do meu agente | [Codex e Claude Code](skills/jev-decidir/README.md) | Skill jev-decidir instalada, variantes portáteis e script de consulta |
 | Pedir ao meu agente para integrar Jev | [Skill jev-integrar](skills/jev-integrar/SKILL.md) | Instruções copiáveis para o agente trabalhar no projeto de destino |
-| Começar por uma atividade | [17 áreas](areas/README.md) | Dez pacotes executáveis com templates, fixture e instruções |
+| Começar por uma atividade | [18 áreas](areas/README.md) | Dez pacotes executáveis com templates, fixture e instruções |
 | Integrar no meu backend | [Integração nos sistemas](INTEGRACAO.md) | Exemplo Python e contrato de subprocesso para outros sistemas |
 | Adaptar um fluxo de trabalho | [Receitas](receitas/README.md) | Triagem, seleção de skills, evidências e revisão de código |
 
@@ -25,7 +25,7 @@ A execução usa uma resposta simulada identificada como tal. Não acessa a rede
 
 ```text
 pacotes/
-├── areas/                   17 aplicações com exemplos executáveis
+├── areas/                   18 aplicações com exemplos executáveis
 ├── integracao.py            Função avaliar_area para seu backend
 ├── executar.py              Executor compartilhado
 ├── python/                  Exemplo que importa o cliente existente

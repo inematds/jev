@@ -1,4 +1,4 @@
-# 17 áreas de aplicação
+# 18 áreas de aplicação
 
 Todos os pacotes usam o mesmo executor e o núcleo Python existente. As demonstrações são simuladas; o modo `--live` consulta a API e pode consumir créditos.
 
@@ -26,6 +26,12 @@ Sete pacotes adicionais com perguntas combinadas:
 | [Cortes](cortes/README.md) | Clareza e independência da transcrição de um trecho. |
 | [Notas](notas/README.md) | Tarefa, ideia, diário e referência após transcrição. |
 | [Curadoria](curadoria/README.md) | Relevância textual conforme interesses declarados. |
+
+Pacote de cruzamento com perfis:
+
+| Área | Objetivo |
+|---|---|
+| [Viagens](viagens/README.md) | Atributos de um anúncio de hospedagem, avaliados uma vez e cruzados por regra com vários perfis (`pacotes.cruzamento`). |
 
 [Lotes e avaliação por pergunta](../../docs/11-fluxos-praticos.md).
 

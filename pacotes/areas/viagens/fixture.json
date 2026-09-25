@@ -1,0 +1,70 @@
+{
+  "model": "exemplo-didatico-nao-jev",
+  "answers": {
+    "decisao": {
+      "type": "choice",
+      "probabilities": {
+        "dinheiro": 0.02,
+        "credito_hotel": 0.02,
+        "sem_reembolso": 0.01,
+        "insuficiente": 0.95
+      },
+      "confidence": 0.92,
+      "choice": "insuficiente"
+    },
+    "chegada_madrugada": {
+      "type": "choice",
+      "probabilities": {
+        "atende": 0.96,
+        "viola": 0.02,
+        "insuficiente": 0.02
+      },
+      "confidence": 0.94,
+      "choice": "atende"
+    },
+    "piscina_inclusa": {
+      "type": "choice",
+      "probabilities": {
+        "atende": 0.95,
+        "viola": 0.02,
+        "insuficiente": 0.03
+      },
+      "confidence": 0.93,
+      "choice": "atende"
+    },
+    "trilha_inclusa": {
+      "type": "choice",
+      "probabilities": {
+        "atende": 0.03,
+        "viola": 0.94,
+        "insuficiente": 0.03
+      },
+      "confidence": 0.92,
+      "choice": "viola"
+    },
+    "entrada_sem_escada": {
+      "type": "choice",
+      "probabilities": {
+        "atende": 0.01,
+        "viola": 0.97,
+        "insuficiente": 0.02
+      },
+      "confidence": 0.95,
+      "choice": "viola"
+    },
+    "piscina_acessivel": {
+      "type": "choice",
+      "probabilities": {
+        "atende": 0.03,
+        "viola": 0.05,
+        "insuficiente": 0.92
+      },
+      "confidence": 0.9,
+      "choice": "insuficiente"
+    }
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}

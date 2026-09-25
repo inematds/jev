@@ -24,7 +24,7 @@ python3 -m pacotes.executar reunioes
 python3 -m pacotes.qualidade reunioes
 ```
 
-O primeiro lista os 17 pacotes. O segundo demonstra uma resposta inventada. O terceiro compara a fixture com rótulos autorais: serve para aprender o relatório, **não comprova qualidade do Jev**. Noul e Score continuam em revisão na política existente, mesmo que a fixture pareça confiante.
+O primeiro lista os 18 pacotes. O segundo demonstra uma resposta inventada. O terceiro compara a fixture com rótulos autorais: serve para aprender o relatório, **não comprova qualidade do Jev**. Noul e Score continuam em revisão na política existente, mesmo que a fixture pareça confiante.
 
 ## Processar eventos sem montar outro sistema
 

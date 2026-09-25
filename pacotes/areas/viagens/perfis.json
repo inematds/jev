@@ -1,0 +1,18 @@
+{
+  "origin": "simulation",
+  "note": "Doze perfis fictícios. Orçamento e preço são dados estruturados do sistema, não perguntas ao Jev.",
+  "perfis": [
+    {"id": "v01", "descricao": "Econômico, sem outras exigências", "orcamento_diaria": 300, "requisitos": {}, "desejaveis": []},
+    {"id": "v02", "descricao": "Voo chega à 1h", "orcamento_diaria": 500, "requisitos": {"chegada_madrugada": ["atende"]}, "desejaveis": ["piscina_inclusa"]},
+    {"id": "v03", "descricao": "Férias com piscina", "orcamento_diaria": 600, "requisitos": {"piscina_inclusa": ["atende"]}, "desejaveis": ["trilha_inclusa"]},
+    {"id": "v04", "descricao": "Quer trilha guiada incluída", "orcamento_diaria": 700, "requisitos": {"trilha_inclusa": ["atende"]}, "desejaveis": []},
+    {"id": "v05", "descricao": "Usuária de cadeira de rodas", "orcamento_diaria": 800, "requisitos": {"entrada_sem_escada": ["atende"], "piscina_acessivel": ["atende"]}, "desejaveis": []},
+    {"id": "v06", "descricao": "Só reserva com reembolso em dinheiro", "orcamento_diaria": 600, "requisitos": {"decisao": ["dinheiro"]}, "desejaveis": []},
+    {"id": "v07", "descricao": "Aceita crédito, quer piscina", "orcamento_diaria": 500, "requisitos": {"decisao": ["dinheiro", "credito_hotel"], "piscina_inclusa": ["atende"]}, "desejaveis": []},
+    {"id": "v08", "descricao": "Exige todos os itens", "orcamento_diaria": 1000, "requisitos": {"decisao": ["dinheiro"], "chegada_madrugada": ["atende"], "piscina_inclusa": ["atende"], "trilha_inclusa": ["atende"], "entrada_sem_escada": ["atende"], "piscina_acessivel": ["atende"]}, "desejaveis": []},
+    {"id": "v09", "descricao": "Flexível", "orcamento_diaria": 450, "requisitos": {}, "desejaveis": ["piscina_inclusa", "trilha_inclusa"]},
+    {"id": "v10", "descricao": "Precisa de piscina acessível", "orcamento_diaria": 900, "requisitos": {"piscina_acessivel": ["atende"]}, "desejaveis": []},
+    {"id": "v11", "descricao": "Chegada tarde e piscina, orçamento curto", "orcamento_diaria": 400, "requisitos": {"chegada_madrugada": ["atende"], "piscina_inclusa": ["atende"]}, "desejaveis": []},
+    {"id": "v12", "descricao": "Chegada tarde e piscina", "orcamento_diaria": 800, "requisitos": {"chegada_madrugada": ["atende"], "piscina_inclusa": ["atende"]}, "desejaveis": ["trilha_inclusa"]}
+  ]
+}

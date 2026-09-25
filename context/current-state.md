@@ -23,3 +23,5 @@ Verificação v1.6.1: 52 testes automatizados passaram; sete demonstrações e s
 21/09/2026: pendências registradas em tasks/current.md; análise local do Laya em docs/13-analise-laya.md. Verificados 14 testes da aplicação Laya e compatibilidade estrutural de 16 respostas já salvas. Não houve nova inferência ou integração operacional.
 
 21/09/2026: referências públicas Laya agregadas aos READMEs PT/EN/ES e ao guia (#laya), com seção correspondente no Eventos. Adaptador e inferência comparativa continuam pendentes.
+
+24/09/2026 · v1.8.1: pacote viagens (anúncio avaliado uma vez, cruzado por regra com 12 perfis via pacotes.cruzamento); 18 pacotes, 63 testes. Fixture e perfis simulados; nenhuma nova inferência real.

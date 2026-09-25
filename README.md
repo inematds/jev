@@ -4,7 +4,7 @@
 
 ![Jev Decision Lab — mais recursos, uso simples: 20 casos práticos, experimentos e comparação](capa/novos-recursos-v1.2.1.png)
 
-**v1.7.1** · Um laboratório para formular, testar e comparar decisões de IA, com uma interface simples e recursos avançados quando você precisar.
+**v1.8.1** · Um laboratório para formular, testar e comparar decisões de IA, com uma interface simples e recursos avançados quando você precisar.
 
 [Abrir laboratório](https://inematds.github.io/jev/app/) · [Guia de uso](https://inematds.github.io/jev/guia/) · [Curso em português](https://inematds.github.io/jev-curso/)
 
@@ -16,11 +16,11 @@
 
 ## Leve para seu projeto
 
-A pasta **[pacotes/](pacotes/README.md)** reúne **17 pacotes por área**, uma integração Python, a skill `jev-integrar` e receitas de uso. Comece offline com `python3 -m pacotes.executar atendimento`. Para seu backend, veja [como integrar Jev nos sistemas](pacotes/INTEGRACAO.md). Veja em cada pacote o que já funciona e o que ainda depende de integração.
+A pasta **[pacotes/](pacotes/README.md)** reúne **18 pacotes por área**, uma integração Python, a skill `jev-integrar` e receitas de uso. Comece offline com `python3 -m pacotes.executar atendimento`. Para seu backend, veja [como integrar Jev nos sistemas](pacotes/INTEGRACAO.md). Veja em cada pacote o que já funciona e o que ainda depende de integração.
 
 ## Novos fluxos práticos
 
-Agora são **17 pacotes reutilizáveis**: os dez originais mais **caixa de entrada, comentários do YouTube, comunidades, reuniões, cortes por transcrição, notas e curadoria de feed**. Os novos pacotes combinam Choice, Noul e Score; suas fixtures são fictícias, sem benchmark real.
+Agora são **18 pacotes reutilizáveis**: os dez originais mais **caixa de entrada, comentários do YouTube, comunidades, reuniões, cortes por transcrição, notas, curadoria de feed e hospedagem × perfis de viajantes**. Os novos pacotes combinam Choice, Noul e Score; suas fixtures são fictícias, sem benchmark real. O pacote de viagens avalia cada anúncio uma vez e cruza as respostas por regra com doze perfis (`python3 -m pacotes.cruzamento viagens --preco 420`).
 
 ```bash
 python3 -m pacotes.executar reunioes

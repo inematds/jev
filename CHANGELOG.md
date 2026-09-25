@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.8.1 — 2026-09-24
+
+- Pacote `viagens`: seis perguntas Choice sobre um anúncio fictício de hospedagem (reembolso, chegada de madrugada, piscina, trilha, escada, piscina acessível), com `insuficiente` quando o anúncio remete a outro canal.
+- Módulo `pacotes.cruzamento`: cruza por regra as respostas de um item com vários perfis; respostas em revisão deixam o perfil em `revisar`, nunca em `compativel`. Preço e orçamento vêm do sistema, não do modelo.
+- Doze perfis fictícios; 18 pacotes no total. 63 testes automatizados; fixture simulada, nenhuma nova inferência real.
+
 ## Documentação — 2026-09-21
 
 - Referências Laya INEMA, código original e model card nos READMEs, análise e guia.

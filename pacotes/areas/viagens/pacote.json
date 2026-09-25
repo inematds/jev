@@ -1,0 +1,19 @@
+{
+  "id": "viagens",
+  "title": "Hospedagem × perfis de viajantes",
+  "objective": "Extrair uma vez os atributos de um anúncio e cruzá-los por regra com vários perfis.",
+  "sensitive": false,
+  "expected": "insuficiente",
+  "expected_answers": {
+    "decisao": "insuficiente",
+    "chegada_madrugada": "atende",
+    "piscina_inclusa": "atende",
+    "trilha_inclusa": "viola",
+    "entrada_sem_escada": "viola",
+    "piscina_acessivel": "insuficiente"
+  },
+  "integration_point": "Ao cadastrar ou atualizar um anúncio de hospedagem.",
+  "suggested_use": "Guardar as respostas do anúncio e cruzar com perfis por regra (pacotes.cruzamento). Atributos em revisão deixam o perfil em revisar; nada é reservado ou recomendado automaticamente.",
+  "fixture_origin": "simulation",
+  "fixture_request_sha256": "9e1b594b0f4f04822fa9c14be627ce5cfcad8e6454483f679549a4ac1965e589"
+}

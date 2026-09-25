@@ -4,7 +4,7 @@
 
 ![Jev Decision Lab — more features, simple to use: 20 practical cases, experiments and comparisons](capa/novos-recursos-v1.2.1.png)
 
-**v1.7.1** · A lab for defining, testing and comparing AI decisions, with a simple interface and advanced features when you need them.
+**v1.8.1** · A lab for defining, testing and comparing AI decisions, with a simple interface and advanced features when you need them.
 
 [Open the lab](https://inematds.github.io/jev/app/) · [User guide](https://inematds.github.io/jev/guia/) · [Course in Portuguese](https://inematds.github.io/jev-curso/)
 
@@ -18,11 +18,11 @@ This README is translated into English. The interface, linked project documentat
 
 ## Bring it into your project
 
-The **[pacotes/](pacotes/README.md)** directory contains **17 packages by activity**, a Python integration, the `jev-integrar` skill and usage recipes. Start offline with `python3 -m pacotes.executar atendimento`. For your backend, see [how to integrate Jev into your systems](pacotes/INTEGRACAO.md). Each package explains what already works and what still requires integration.
+The **[pacotes/](pacotes/README.md)** directory contains **18 packages by activity**, a Python integration, the `jev-integrar` skill and usage recipes. Start offline with `python3 -m pacotes.executar atendimento`. For your backend, see [how to integrate Jev into your systems](pacotes/INTEGRACAO.md). Each package explains what already works and what still requires integration.
 
 ## New practical workflows
 
-There are now **17 reusable packages**: the original ten plus **inbox triage, YouTube comments, communities, meetings, transcript-based clip selection, notes and feed curation**. The new packages combine Choice, Noul and Score; their fixtures are fictional, with no real benchmark.
+There are now **18 reusable packages**: the original ten plus **inbox triage, YouTube comments, communities, meetings, transcript-based clip selection, notes, feed curation and lodging × traveler profiles**. The new packages combine Choice, Noul and Score; their fixtures are fictional, with no real benchmark. The travel package evaluates each listing once and matches the answers against twelve profiles by rule (`python3 -m pacotes.cruzamento viagens --preco 420`).
 
 ```bash
 python3 -m pacotes.executar reunioes
